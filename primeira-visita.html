@@ -1,0 +1,494 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="digiturma.png">
+<title>Bem-vindo ao DigiTurma! 🖥️</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style/global.css">
+<link rel="stylesheet" href="style/primeira-visita.css">
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-stars"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">✨ Primeiro Acesso</div>
+    <div class="logo">🖥️ Digi<span>Turma</span></div>
+    <h1>Olá! Que bom ter você aqui! 👋</h1>
+    <p>Antes de começar a aventura, responde algumas perguntinhas rápidas. Isso nos ajuda a melhorar o DigiTurma para crianças como você!</p>
+  </div>
+</div>
+
+<!-- PROGRESS BAR -->
+<div class="progress-wrap">
+  <div class="steps-indicator">
+    <div class="step-dot active" id="dot1">1</div>
+    <div class="step-line" id="line1"></div>
+    <div class="step-dot" id="dot2">2</div>
+    <div class="step-line" id="line2"></div>
+    <div class="step-dot" id="dot3">3</div>
+  </div>
+  <div class="step-labels">
+    <span class="active" id="lbl1">👤 Sobre Você</span>
+    <span id="lbl2">💻 Tecnologia</span>
+    <span id="lbl3">📣 Finalizar</span>
+  </div>
+</div>
+
+<div class="form-card">
+
+  <!-- ══════════════════════════════════════════════ STEP 1 ══ -->
+  <div class="step-panel active" id="step1">
+    <div class="section-card">
+      <span class="section-icon">👤</span>
+      <h2>Sobre Você</h2>
+      <p class="section-desc">Conta um pouquinho sobre você! Campos com <span class="req">*</span> são obrigatórios.</p>
+
+      <!-- Nome + Sobrenome -->
+      <div class="form-group" id="grp-nome" style="margin-bottom:1.5rem;">
+        <label>✏️ Qual é o seu nome completo? <span class="req">*</span></label>
+        <div class="name-row">
+          <div class="form-group" id="grp-nome1">
+            <input type="text" id="f-nome" placeholder="Nome" maxlength="40" autocomplete="given-name">
+            <div class="error-msg" id="err-nome">⚠️ Digite seu nome!</div>
+          </div>
+          <div class="form-group" id="grp-sobrenome">
+            <input type="text" id="f-sobrenome" placeholder="Sobrenome" maxlength="60" autocomplete="family-name">
+            <div class="error-msg" id="err-sobrenome">⚠️ Digite seu sobrenome!</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Idade -->
+      <div class="form-group" id="grp-idade">
+        <label>🎂 Quantos anos você tem? <span class="req">*</span></label>
+        <select id="f-idade">
+          <option value="">— Selecione sua idade —</option>
+          <option value="5 anos">5 anos</option>
+          <option value="6 anos">6 anos</option>
+          <option value="7 anos">7 anos</option>
+          <option value="8 anos">8 anos</option>
+          <option value="9 anos">9 anos</option>
+          <option value="10 anos">10 anos</option>
+          <option value="11 anos">11 anos</option>
+          <option value="12 anos">12 anos</option>
+        </select>
+        <div class="error-msg" id="err-idade">⚠️ Por favor, escolha sua idade!</div>
+      </div>
+
+      <!-- Gênero -->
+      <div class="form-group" id="grp-genero">
+        <label>🌈 Você é: <span class="req">*</span></label>
+        <div class="radio-group">
+          <div class="radio-pill">
+            <input type="radio" name="genero" id="g1" value="Masculino">
+            <label for="g1">👦 Menino</label>
+          </div>
+          <div class="radio-pill">
+            <input type="radio" name="genero" id="g2" value="Feminino">
+            <label for="g2">👧 Menina</label>
+          </div>
+          <div class="radio-pill">
+            <input type="radio" name="genero" id="g3" value="Outro">
+            <label for="g3">🌈 Outro</label>
+          </div>
+          <div class="radio-pill">
+            <input type="radio" name="genero" id="g4" value="Prefiro não informar">
+            <label for="g4">🤐 Prefiro não dizer</label>
+          </div>
+        </div>
+        <div class="error-msg" id="err-genero">⚠️ Escolha uma opção!</div>
+      </div>
+
+      <!-- Raça / Cor -->
+      <div class="form-group" id="grp-raca">
+        <label>🤝 Como você se declara? <span class="req">*</span> <span class="field-hint">(autodeclaração)</span></label>
+        <div class="radio-group">
+          <div class="radio-pill">
+            <input type="radio" name="raca" id="r1" value="Branco(a)">
+            <label for="r1">Branco(a)</label>
+          </div>
+          <div class="radio-pill">
+            <input type="radio" name="raca" id="r2" value="Pardo(a)">
+            <label for="r2">Pardo(a)</label>
+          </div>
+          <div class="radio-pill">
+            <input type="radio" name="raca" id="r3" value="Preto(a)">
+            <label for="r3">Preto(a)</label>
+          </div>
+          <div class="radio-pill">
+            <input type="radio" name="raca" id="r4" value="Amarelo(a)">
+            <label for="r4">Amarelo(a)</label>
+          </div>
+          <div class="radio-pill">
+            <input type="radio" name="raca" id="r5" value="Indígena">
+            <label for="r5">Indígena</label>
+          </div>
+          <div class="radio-pill">
+            <input type="radio" name="raca" id="r6" value="Prefiro não informar">
+            <label for="r6">🤐 Prefiro não dizer</label>
+          </div>
+        </div>
+        <div class="error-msg" id="err-raca">⚠️ Escolha uma opção!</div>
+      </div>
+
+      <!-- Ano Escolar — somente Ensino Fundamental -->
+      <div class="form-group" id="grp-ano">
+        <label>🏫 Em qual ano do Ensino Fundamental você está? <span class="req">*</span></label>
+        <select id="f-ano">
+          <option value="">— Selecione seu ano —</option>
+          <optgroup label="📚 Anos Iniciais">
+            <option value="EF 1º ano">1º ano</option>
+            <option value="EF 2º ano">2º ano</option>
+            <option value="EF 3º ano">3º ano</option>
+            <option value="EF 4º ano">4º ano</option>
+            <option value="EF 5º ano">5º ano</option>
+          </optgroup>
+          <optgroup label="📚 Anos Finais">
+            <option value="EF 6º ano">6º ano</option>
+            <option value="EF 7º ano">7º ano</option>
+            <option value="EF 8º ano">8º ano</option>
+            <option value="EF 9º ano">9º ano</option>
+          </optgroup>
+        </select>
+        <div class="error-msg" id="err-ano">⚠️ Selecione seu ano escolar!</div>
+      </div>
+
+      <!-- Tipo de escola -->
+      <div class="form-group" id="grp-escola">
+        <label>🏛️ Sua escola é: <span class="req">*</span></label>
+        <div class="radio-group">
+          <div class="radio-pill">
+            <input type="radio" name="escola" id="e1" value="Pública">
+            <label for="e1">🏫 Pública</label>
+          </div>
+          <div class="radio-pill">
+            <input type="radio" name="escola" id="e2" value="Particular">
+            <label for="e2">🏛️ Particular</label>
+          </div>
+          <div class="radio-pill">
+            <input type="radio" name="escola" id="e3" value="Não estou estudando">
+            <label for="e3">📚 Não estou estudando</label>
+          </div>
+        </div>
+        <div class="error-msg" id="err-escola">⚠️ Escolha uma opção!</div>
+      </div>
+
+    </div>
+    <div class="btn-wrap">
+      <button class="btn-next" onclick="goStep(2)">Próximo ➡️</button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════ STEP 2 ══ -->
+  <div class="step-panel" id="step2">
+    <div class="section-card">
+      <span class="section-icon">💻</span>
+      <h2>Sua Tecnologia</h2>
+      <p class="section-desc">Conta como você usa a tecnologia no dia a dia!</p>
+
+      <!-- Tem computador -->
+      <div class="form-group" id="grp-tempc">
+        <label>🖥️ Você tem computador ou notebook em casa? <span class="req">*</span></label>
+        <div class="radio-group">
+          <div class="radio-pill">
+            <input type="radio" name="tempc" id="pc1" value="Sim, tenho meu próprio">
+            <label for="pc1">✅ Sim, tenho o meu</label>
+          </div>
+          <div class="radio-pill">
+            <input type="radio" name="tempc" id="pc2" value="Compartilhado com a família">
+            <label for="pc2">👨‍👩‍👧 Compartilho com a família</label>
+          </div>
+          <div class="radio-pill">
+            <input type="radio" name="tempc" id="pc3" value="Não tenho">
+            <label for="pc3">❌ Não tenho</label>
+          </div>
+        </div>
+        <div class="error-msg" id="err-tempc">⚠️ Escolha uma opção!</div>
+      </div>
+
+      <!-- Internet em casa — 3 opções -->
+      <div class="form-group" id="grp-internet">
+        <label>🌐 Você tem acesso à internet em casa? <span class="req">*</span></label>
+        <div class="radio-group">
+          <div class="radio-pill">
+            <input type="radio" name="internet" id="i1" value="Sim">
+            <label for="i1">✅ Sim</label>
+          </div>
+          <div class="radio-pill">
+            <input type="radio" name="internet" id="i2" value="Às vezes">
+            <label for="i2">📡 Às vezes</label>
+          </div>
+          <div class="radio-pill">
+            <input type="radio" name="internet" id="i3" value="Não">
+            <label for="i3">❌ Não</label>
+          </div>
+        </div>
+        <div class="error-msg" id="err-internet">⚠️ Escolha uma opção!</div>
+      </div>
+
+      <!-- Você já usou um computador? -->
+      <div class="form-group" id="grp-exp">
+        <label>🤔 Você já usou um computador? <span class="req">*</span></label>
+        <div class="radio-group">
+          <div class="radio-pill">
+            <input type="radio" name="exp" id="ex1" value="Sim, uso bastante">
+            <label for="ex1">😎 Sim, bastante!</label>
+          </div>
+          <div class="radio-pill">
+            <input type="radio" name="exp" id="ex2" value="Sim, poucas vezes">
+            <label for="ex2">😐 Poucas vezes</label>
+          </div>
+          <div class="radio-pill">
+            <input type="radio" name="exp" id="ex3" value="Nunca usei">
+            <label for="ex3">😮 Nunca usei!</label>
+          </div>
+        </div>
+        <div class="error-msg" id="err-exp">⚠️ Escolha uma opção!</div>
+      </div>
+
+      <!-- Para que usa a internet — com lógica exclusiva de "Não uso" -->
+      <div class="form-group" id="grp-uso">
+        <label>🎯 Para que você usa mais a internet? <span class="req">*</span> <span class="field-hint">pode marcar mais de um</span></label>
+        <div class="check-group" id="cg-uso">
+          <div class="check-pill">
+            <input type="checkbox" id="u1" value="Entretenimento (vídeos e jogos)" onchange="handleCheck(this,'cg-uso','u-nao')">
+            <label for="u1">🎮 Jogos e vídeos</label>
+          </div>
+          <div class="check-pill">
+            <input type="checkbox" id="u2" value="Redes sociais" onchange="handleCheck(this,'cg-uso','u-nao')">
+            <label for="u2">📲 Redes sociais</label>
+          </div>
+          <div class="check-pill">
+            <input type="checkbox" id="u3" value="Estudos e pesquisas" onchange="handleCheck(this,'cg-uso','u-nao')">
+            <label for="u3">📚 Estudar</label>
+          </div>
+          <div class="check-pill">
+            <input type="checkbox" id="u4" value="Comunicação com família" onchange="handleCheck(this,'cg-uso','u-nao')">
+            <label for="u4">💬 Falar com família</label>
+          </div>
+          <div class="check-pill negativo">
+            <input type="checkbox" id="u-nao" value="Não uso internet" onchange="handleNaoCheck(this,'cg-uso')">
+            <label for="u-nao">🚫 Não uso internet</label>
+          </div>
+        </div>
+        <div class="error-msg" id="err-uso">⚠️ Marque pelo menos uma opção!</div>
+      </div>
+
+    </div>
+    <div class="btn-wrap">
+      <button class="btn-back" onclick="goStep(1)">⬅️ Voltar</button>
+      <button class="btn-next" onclick="goStep(3)">Próximo ➡️</button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════ STEP 3 ══ -->
+  <div class="step-panel" id="step3">
+
+    <div class="note-box">
+      <span style="font-size:1.5rem;">🔒</span>
+      <p><strong>Suas respostas são confidenciais!</strong> Essas informações são usadas apenas para fins acadêmicos e para melhorar o DigiTurma. Nenhum dado pessoal identificável será divulgado.</p>
+    </div>
+
+    <div class="section-card">
+      <span class="section-icon">📣</span>
+      <h2>Quase lá!</h2>
+      <p class="section-desc">Última perguntinha!</p>
+
+      <!-- Como ficou sabendo -->
+      <div class="form-group">
+        <label>📣 Como você ficou sabendo do DigiTurma? <span class="field-hint">(opcional)</span></label>
+        <select id="f-como">
+          <option value="">— Selecione —</option>
+          <option value="Escola">Escola / Professor(a)</option>
+          <option value="Amigos ou família">Amigos ou família</option>
+          <option value="Redes sociais">Redes sociais</option>
+          <option value="Internet / busca">Internet / busca</option>
+          <option value="Outro">Outro</option>
+        </select>
+      </div>
+
+    </div>
+
+    <div class="btn-wrap">
+      <button class="btn-back" onclick="goStep(2)">⬅️ Voltar</button>
+      <button class="btn-submit" onclick="submitForm()">🎉 Começar a Aventura!</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- SUCCESS MODAL -->
+<div class="success-overlay" id="successOverlay">
+  <div class="success-modal">
+    <span class="success-emoji">🎉</span>
+    <h2 id="modal-titulo">Pronto!</h2>
+    <p id="modal-texto">Cadastro feito com sucesso! Agora é só se divertir e aprender muito no DigiTurma!</p>
+    <a href="index.html" class="btn-go">🚀 Entrar no DigiTurma!</a>
+  </div>
+</div>
+
+<footer>
+  <p>🖥️ <strong>DigiTurma</strong> • 2026</p>
+</footer>
+
+<script>
+  // Se já fez o cadastro, vai direto para o início
+  if (localStorage.getItem('digiturma_cadastro') === 'ok') {
+    window.location.replace('index.html');
+  }
+
+  // URL do "App da Web" do Google Apps Script (termina em /exec) e o token
+  // secreto (deve ser igual ao TOKEN definido em script/apps-script-relatorio.gs).
+  const SHEET_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbzCkQeXSsINukR1ejIbaddOIQKNcHvv1ZNAg-Xg-43jJuPerMaHIsr4WKrM88mvbM97BA/exec';
+  const SHEET_TOKEN = 'Projeto-DigiTurma@Estacio2026';
+
+  let currentStep = 1;
+
+  // ── Lógica exclusiva para opções negativas em checkbox groups ──────────────
+  // Quando o aluno marca "Não uso", desmarca todas as outras opções do grupo.
+  // Quando marca qualquer outra opção, desmarca o "Não uso".
+  function handleNaoCheck(naoEl, groupId) {
+    if (naoEl.checked) {
+      document.querySelectorAll(`#${groupId} input[type="checkbox"]`).forEach(cb => {
+        if (cb !== naoEl) cb.checked = false;
+      });
+    }
+  }
+
+  function handleCheck(el, groupId, naoId) {
+    if (el.checked) {
+      const naoEl = document.getElementById(naoId);
+      if (naoEl) naoEl.checked = false;
+    }
+  }
+
+  // ── Navegação entre etapas ─────────────────────────────────────────────────
+  function goStep(target) {
+    if (target > currentStep && !validateStep(currentStep)) return;
+    currentStep = target;
+
+    document.querySelectorAll('.step-panel').forEach(p => p.classList.remove('active'));
+    document.getElementById('step' + target).classList.add('active');
+
+    for (let i = 1; i <= 3; i++) {
+      const dot = document.getElementById('dot' + i);
+      const lbl = document.getElementById('lbl' + i);
+      dot.classList.remove('active', 'done');
+      lbl.classList.remove('active');
+      if (i < target)      { dot.classList.add('done');   dot.innerHTML = '✓'; }
+      else if (i === target){ dot.classList.add('active'); dot.innerHTML = i; lbl.classList.add('active'); }
+      else                  { dot.innerHTML = i; }
+    }
+    for (let i = 1; i <= 2; i++) {
+      document.getElementById('line' + i).classList.toggle('done', i < target);
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // ── Validação ──────────────────────────────────────────────────────────────
+  function showError(errId, show) {
+    const el = document.getElementById(errId);
+    if (el) el.classList.toggle('show', show);
+  }
+
+  function validateStep(step) {
+    let ok = true;
+
+    function chkText(id, errId, grpId) {
+      const valid = document.getElementById(id).value.trim().length > 0;
+      showError(errId, !valid);
+      if (grpId) document.getElementById(grpId)?.classList.toggle('has-error', !valid);
+      if (!valid) ok = false;
+    }
+
+    function chkSelect(id, errId, grpId) {
+      const valid = document.getElementById(id).value !== '';
+      showError(errId, !valid);
+      if (grpId) document.getElementById(grpId)?.classList.toggle('has-error', !valid);
+      if (!valid) ok = false;
+    }
+
+    function chkRadio(name, errId) {
+      const valid = !!document.querySelector(`input[name="${name}"]:checked`);
+      showError(errId, !valid);
+      if (!valid) ok = false;
+    }
+
+    function chkCheckbox(groupId, errId) {
+      const valid = document.querySelectorAll(`#${groupId} input:checked`).length > 0;
+      showError(errId, !valid);
+      if (!valid) ok = false;
+    }
+
+    if (step === 1) {
+      chkText('f-nome',      'err-nome',      'grp-nome1');
+      chkText('f-sobrenome', 'err-sobrenome', 'grp-sobrenome');
+      chkSelect('f-idade',   'err-idade',     'grp-idade');
+      chkRadio('genero',     'err-genero');
+      chkRadio('raca',       'err-raca');
+      chkSelect('f-ano',     'err-ano',       'grp-ano');
+      chkRadio('escola',     'err-escola');
+    } else if (step === 2) {
+      chkRadio('tempc',      'err-tempc');
+      chkRadio('internet',   'err-internet');
+      chkRadio('exp',        'err-exp');
+      chkCheckbox('cg-uso',  'err-uso');
+    }
+
+    return ok;
+  }
+
+  // ── Envio ──────────────────────────────────────────────────────────────────
+  function submitForm() {
+    if (!validateStep(3)) return;
+
+    // Coleta usos — se "Não uso" está marcado, salva array vazio (não inclui no relatório)
+    const naoUso = document.getElementById('u-nao').checked;
+    const usos = naoUso
+      ? []
+      : [...document.querySelectorAll('#cg-uso input:checked')].map(c => c.value);
+
+    const perfil = {
+      data_cadastro:   new Date().toLocaleDateString('pt-BR'),
+      nome:            document.getElementById('f-nome').value.trim(),
+      sobrenome:       document.getElementById('f-sobrenome').value.trim(),
+      idade:           document.getElementById('f-idade').value,
+      genero:          document.querySelector('input[name="genero"]:checked').value,
+      raca_cor:        document.querySelector('input[name="raca"]:checked').value,
+      ano_escolar:     document.getElementById('f-ano').value,
+      tipo_escola:     document.querySelector('input[name="escola"]:checked').value,
+      tem_computador:  document.querySelector('input[name="tempc"]:checked').value,
+      internet_casa:   document.querySelector('input[name="internet"]:checked').value,
+      exp_computador:  document.querySelector('input[name="exp"]:checked').value,
+      uso_internet:    usos,
+      como_conheceu:   document.getElementById('f-como').value,
+    };
+
+    const digiturma = JSON.parse(localStorage.getItem('digiturma') || '{}');
+    digiturma.perfil = perfil;
+    localStorage.setItem('digiturma', JSON.stringify(digiturma));
+    localStorage.setItem('digiturma_cadastro', 'ok');
+
+    // Envia uma cópia para a planilha de relatório (não bloqueia o cadastro se falhar)
+    if (SHEET_WEBHOOK_URL && SHEET_WEBHOOK_URL.startsWith('http')) {
+      fetch(SHEET_WEBHOOK_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify({ ...perfil, token: SHEET_TOKEN }),
+      }).catch(() => {});
+    }
+
+    const nome = perfil.nome;
+    document.getElementById('modal-titulo').textContent = `Pronto, ${nome}! 🎉`;
+    document.getElementById('modal-texto').textContent =
+      `Cadastro feito com sucesso! Agora é só explorar o DigiTurma e aprender muito, ${nome}!`;
+    document.getElementById('successOverlay').classList.add('show');
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="digiturma.png">
+<title>Atividades - DigiTurma</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style/global.css">
+<link rel="stylesheet" href="style/atividades.css">
+</head>
+<body>
+<nav>
+  <a class="logo" href="index.html">🖥️ Digi<span>Turma</span></a>
+  <button class="hamburger" onclick="toggleNav()" aria-label="Menu"><span></span><span></span><span></span></button>
+  <div class="nav-links">
+    <a href="index.html">🏠 Início</a>
+    <a href="aulas.html">📚 Aulas</a>
+    <a href="atividades.html" class="active">🎮 Atividades</a>
+    <a href="glossario.html">📖 Glossário</a>
+    <a href="conquistas.html">🏆 Conquistas</a>
+    <a href="sobre.html">ℹ️ Sobre</a>
+  </div>
+</nav>
+<div class="page-header">
+  <h1>🎮 Atividades</h1>
+  <p>Escolha um módulo para testar seus conhecimentos!</p>
+</div>
+<div class="scoreboard">
+  <div class="score-item">
+    <div class="score-num" id="total-score">0</div>
+    <div class="score-label">Pontos</div>
+  </div>
+  <div class="score-item">
+    <div class="score-num" id="correct-count">0</div>
+    <div class="score-label">Acertos</div>
+  </div>
+  <div class="score-item">
+    <div class="score-num" id="medal-count">0</div>
+    <div class="score-label">Medalhas</div>
+  </div>
+</div>
+<div class="container">
+  <div class="modules-grid">
+    <a href="atividades-modulo1.html" class="module-card">
+      <span class="module-icon">🖥️</span>
+      <h3>Módulo 1 — O Computador</h3>
+      <p>Quiz, Verdadeiro ou Falso e o jogo de ligar sobre as partes do computador!</p>
+      <div class="medal-status" id="pips-1"></div>
+      <span class="btn-modulo">🎮 Jogar</span>
+    </a>
+    <a href="atividades-modulo2.html" class="module-card">
+      <span class="module-icon">⌨️</span>
+      <h3>Módulo 2 — Teclado e Mouse</h3>
+      <p>Teste seus conhecimentos sobre teclado, mouse e atalhos de teclado!</p>
+      <div class="medal-status" id="pips-2"></div>
+      <span class="btn-modulo">🎮 Jogar</span>
+    </a>
+    <a href="atividades-modulo3.html" class="module-card">
+      <span class="module-icon">🌐</span>
+      <h3>Módulo 3 — Internet Segura</h3>
+      <p>Mostre que você sabe navegar com segurança e responsabilidade!</p>
+      <div class="medal-status" id="pips-3"></div>
+      <span class="btn-modulo">🎮 Jogar</span>
+    </a>
+    <a href="atividades-modulo4.html" class="module-card">
+      <span class="module-icon">🎨</span>
+      <h3>Módulo 4 — Criando com PC</h3>
+      <p>Prove que você conhece os programas e sabe organizar arquivos!</p>
+      <div class="medal-status" id="pips-4"></div>
+      <span class="btn-modulo">🎮 Jogar</span>
+    </a>
+    <a href="atividades-modulo5.html" class="module-card">
+      <span class="module-icon">🤖</span>
+      <h3>Módulo 5 — Inteligência Artificial</h3>
+      <p>Mostre que você entende o que é IA e como ela funciona no mundo real!</p>
+      <div class="medal-status" id="pips-5"></div>
+      <span class="btn-modulo">🎮 Jogar</span>
+    </a>
+  </div>
+</div>
+<footer>
+  <p>🖥️ <strong>DigiTurma</strong> • 2026</p>
+</footer>
+<script src="script/global.js"></script>
+<script>
+  const saved = JSON.parse(localStorage.getItem('digiturma') || '{}');
+  document.getElementById('total-score').textContent   = saved.totalScore   || 0;
+  document.getElementById('correct-count').textContent = saved.correctCount || 0;
+  document.getElementById('medal-count').textContent   = (saved.medals || []).length;
+
+  // Medal names per module (3 each)
+  const modMedals = {
+    1: ['Gênio do Computador','Detetive do Computador','Mestre das Peças'],
+    2: ['Craque do Teclado','Dedo de Ouro','Rei dos Atalhos'],
+    3: ['Guardião da Net','Protetor Digital','Navegador Seguro'],
+    4: ['Artista Digital','Organizador Master','Criador Digital'],
+    5: ['Especialista em IA','Pensador do Futuro','Explorador Digital'],
+  };
+  const earned = (saved.medals || []).map(m => m.name);
+
+  [1,2,3,4,5].forEach(n => {
+    const el = document.getElementById('pips-' + n);
+    modMedals[n].forEach(name => {
+      const pip = document.createElement('span');
+      pip.className = 'medal-pip' + (earned.includes(name) ? ' earned' : '');
+      pip.title = name;
+      pip.textContent = earned.includes(name) ? '🏅' : '';
+      el.appendChild(pip);
+    });
+  });
+</script>
+</body>
+</html>

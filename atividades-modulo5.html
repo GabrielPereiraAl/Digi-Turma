@@ -1,0 +1,502 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="digiturma.png">
+<title>Atividades — Módulo 5: Inteligência Artificial - DigiTurma</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style/global.css">
+<link rel="stylesheet" href="style/atividades-modulo.css">
+</head>
+<body>
+<nav>
+  <a class="logo" href="index.html">🖥️ Digi<span>Turma</span></a>
+  <button class="hamburger" onclick="toggleNav()" aria-label="Menu"><span></span><span></span><span></span></button>
+  <div class="nav-links">
+    <a href="index.html">🏠 Início</a>
+    <a href="aulas.html">📚 Aulas</a>
+    <a href="atividades.html" class="active">🎮 Atividades</a>
+    <a href="glossario.html">📖 Glossário</a>
+    <a href="conquistas.html">🏆 Conquistas</a>
+    <a href="sobre.html">ℹ️ Sobre</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1>🤖 Módulo 5 — Inteligência Artificial</h1>
+  <p>Teste seus conhecimentos e ganhe medalhas!</p>
+</div>
+
+<div class="scoreboard">
+  <div class="score-item">
+    <div class="score-num" id="total-score">0</div>
+    <div class="score-label">Pontos</div>
+  </div>
+  <div class="score-item">
+    <div class="score-num" id="correct-count">0</div>
+    <div class="score-label">Acertos</div>
+  </div>
+  <div class="score-item">
+    <div class="score-num" id="medal-count">0</div>
+    <div class="score-label">Medalhas</div>
+  </div>
+</div>
+
+<div class="activities-container">
+  <div class="module-header">
+    <div class="module-header-icon">🤖</div>
+    <div>
+      <h2>Módulo 5 — Inteligência Artificial</h2>
+      <p>Mostre que você entende o futuro da tecnologia!</p>
+    </div>
+  </div>
+
+  <!-- Atividade 5.1 - Quiz -->
+  <div class="activity-card">
+    <div class="activity-title">🎯 Quiz — Inteligência Artificial</div>
+    <div class="activity-subtitle">Múltipla escolha • 5 questões • 10 pontos cada</div>
+
+    <div class="quiz-question" id="q5_1">
+      <p>1. O que é Inteligência Artificial (IA)?</p>
+      <div class="options">
+        <button class="option-btn" onclick="checkQuiz(this,'q5_1','B')"><span class="option-letter">A</span> Um robô que faz tarefas domésticas</button>
+        <button class="option-btn" onclick="checkQuiz(this,'q5_1','B')"><span class="option-letter">B</span> Um sistema que aprende com dados e toma decisões</button>
+        <button class="option-btn" onclick="checkQuiz(this,'q5_1','B')"><span class="option-letter">C</span> Um videogame muito avançado</button>
+        <button class="option-btn" onclick="checkQuiz(this,'q5_1','B')"><span class="option-letter">D</span> Um tipo de vírus de computador</button>
+      </div>
+      <div class="feedback" id="fb_q5_1"></div>
+    </div>
+
+    <div class="quiz-question" id="q5_2">
+      <p>2. Como a IA aprende a reconhecer imagens, como fotos de gatos?</p>
+      <div class="options">
+        <button class="option-btn" onclick="checkQuiz(this,'q5_2','C')"><span class="option-letter">A</span> Alguém desenha cada imagem para ela</button>
+        <button class="option-btn" onclick="checkQuiz(this,'q5_2','C')"><span class="option-letter">B</span> Ela vai à escola igual às crianças</button>
+        <button class="option-btn" onclick="checkQuiz(this,'q5_2','C')"><span class="option-letter">C</span> Analisando muitos exemplos até aprender sozinha</button>
+        <button class="option-btn" onclick="checkQuiz(this,'q5_2','C')"><span class="option-letter">D</span> Copiando o que um humano faz em tempo real</button>
+      </div>
+      <div class="feedback" id="fb_q5_2"></div>
+    </div>
+
+    <div class="quiz-question" id="q5_3">
+      <p>3. Qual destes é um exemplo de IA no dia a dia?</p>
+      <div class="options">
+        <button class="option-btn" onclick="checkQuiz(this,'q5_3','A')"><span class="option-letter">A</span> Um app que recomenda músicas que você vai gostar</button>
+        <button class="option-btn" onclick="checkQuiz(this,'q5_3','A')"><span class="option-letter">B</span> Uma calculadora que faz somas simples</button>
+        <button class="option-btn" onclick="checkQuiz(this,'q5_3','A')"><span class="option-letter">C</span> Um relógio que marca as horas</button>
+        <button class="option-btn" onclick="checkQuiz(this,'q5_3','A')"><span class="option-letter">D</span> Uma lâmpada que acende ao ligar o interruptor</button>
+      </div>
+      <div class="feedback" id="fb_q5_3"></div>
+    </div>
+
+    <div class="quiz-question" id="q5_4">
+      <p>4. O que é IA Generativa?</p>
+      <div class="options">
+        <button class="option-btn" onclick="checkQuiz(this,'q5_4','D')"><span class="option-letter">A</span> Uma IA que só faz cálculos matemáticos</button>
+        <button class="option-btn" onclick="checkQuiz(this,'q5_4','D')"><span class="option-letter">B</span> Uma IA que controla fábricas</button>
+        <button class="option-btn" onclick="checkQuiz(this,'q5_4','D')"><span class="option-letter">C</span> Uma IA que detecta vírus no computador</button>
+        <button class="option-btn" onclick="checkQuiz(this,'q5_4','D')"><span class="option-letter">D</span> Uma IA que cria textos, imagens e músicas novas</button>
+      </div>
+      <div class="feedback" id="fb_q5_4"></div>
+    </div>
+
+    <div class="quiz-question" id="q5_5">
+      <p>5. O que devemos fazer antes de acreditar em informações geradas por IA?</p>
+      <div class="options">
+        <button class="option-btn" onclick="checkQuiz(this,'q5_5','B')"><span class="option-letter">A</span> Compartilhar imediatamente com os amigos</button>
+        <button class="option-btn" onclick="checkQuiz(this,'q5_5','B')"><span class="option-letter">B</span> Verificar se a informação é verdadeira em outras fontes</button>
+        <button class="option-btn" onclick="checkQuiz(this,'q5_5','B')"><span class="option-letter">C</span> Confiar sempre, pois a IA nunca erra</button>
+        <button class="option-btn" onclick="checkQuiz(this,'q5_5','B')"><span class="option-letter">D</span> Imprimir e guardar como documento oficial</button>
+      </div>
+      <div class="feedback" id="fb_q5_5"></div>
+    </div>
+  </div>
+
+  <!-- Atividade 5.2 - Que tipo de IA é essa? -->
+  <div class="activity-card">
+    <div class="activity-title">🤖 Que tipo de IA é essa?</div>
+    <div class="activity-subtitle">Selecione o tipo correto de IA para cada função • 4 pares • 5 pontos cada</div>
+    <div class="dropdown-match" id="dm5">
+      <div class="dm-row">
+        <div class="dm-label">Responder perguntas por voz</div>
+        <select class="dm-select" data-correct="assistente">
+          <option value="">— Selecione —</option>
+          <option value="assistente">🔊 Assistente de voz</option>
+          <option value="recomendacao">🎵 Recomendação</option>
+          <option value="traducao">🌐 Tradutor automático</option>
+          <option value="gerativa">🖼️ IA Generativa</option>
+        </select>
+      </div>
+      <div class="dm-row">
+        <div class="dm-label">Sugerir músicas ou filmes</div>
+        <select class="dm-select" data-correct="recomendacao">
+          <option value="">— Selecione —</option>
+          <option value="assistente">🔊 Assistente de voz</option>
+          <option value="recomendacao">🎵 Recomendação</option>
+          <option value="traducao">🌐 Tradutor automático</option>
+          <option value="gerativa">🖼️ IA Generativa</option>
+        </select>
+      </div>
+      <div class="dm-row">
+        <div class="dm-label">Converter um idioma em outro</div>
+        <select class="dm-select" data-correct="traducao">
+          <option value="">— Selecione —</option>
+          <option value="assistente">🔊 Assistente de voz</option>
+          <option value="recomendacao">🎵 Recomendação</option>
+          <option value="traducao">🌐 Tradutor automático</option>
+          <option value="gerativa">🖼️ IA Generativa</option>
+        </select>
+      </div>
+      <div class="dm-row">
+        <div class="dm-label">Criar imagens, textos e músicas</div>
+        <select class="dm-select" data-correct="gerativa">
+          <option value="">— Selecione —</option>
+          <option value="assistente">🔊 Assistente de voz</option>
+          <option value="recomendacao">🎵 Recomendação</option>
+          <option value="traducao">🌐 Tradutor automático</option>
+          <option value="gerativa">🖼️ IA Generativa</option>
+        </select>
+      </div>
+    </div>
+    <div style="margin-top:1.2rem;display:flex;gap:1rem;flex-wrap:wrap;align-items:center;">
+      <button class="check-btn" onclick="checkDropdownMatch('dm5','match_5')">✅ Verificar respostas</button>
+      <div id="dm5-result" style="font-weight:700;font-size:0.95rem;"></div>
+    </div>
+  </div>
+
+  <!-- Atividade 5.3 - Verdadeiro ou Falso -->
+  <div class="activity-card">
+    <div class="activity-title">✅ Verdadeiro ou Falso? — IA</div>
+    <div class="activity-subtitle">5 questões • 8 pontos cada</div>
+
+    <div class="quiz-question" id="tf5_1">
+      <p>1. A IA aprende analisando grandes quantidades de dados?</p>
+      <div class="tf-options">
+        <button class="tf-btn verdadeiro" onclick="checkTF(this,'tf5_1',true)">👍 Verdadeiro</button>
+        <button class="tf-btn falso" onclick="checkTF(this,'tf5_1',true)">👎 Falso</button>
+      </div>
+      <div class="feedback" id="fb_tf5_1"></div>
+    </div>
+
+    <div class="quiz-question" id="tf5_2">
+      <p>2. A IA sempre acerta e nunca comete erros?</p>
+      <div class="tf-options">
+        <button class="tf-btn verdadeiro" onclick="checkTF(this,'tf5_2',false)">👍 Verdadeiro</button>
+        <button class="tf-btn falso" onclick="checkTF(this,'tf5_2',false)">👎 Falso</button>
+      </div>
+      <div class="feedback" id="fb_tf5_2"></div>
+    </div>
+
+    <div class="quiz-question" id="tf5_3">
+      <p>3. Filtros de beleza em selfies usam Inteligência Artificial?</p>
+      <div class="tf-options">
+        <button class="tf-btn verdadeiro" onclick="checkTF(this,'tf5_3',true)">👍 Verdadeiro</button>
+        <button class="tf-btn falso" onclick="checkTF(this,'tf5_3',true)">👎 Falso</button>
+      </div>
+      <div class="feedback" id="fb_tf5_3"></div>
+    </div>
+
+    <div class="quiz-question" id="tf5_4">
+      <p>4. Podemos compartilhar dados pessoais (nome, endereço) com qualquer IA sem problema?</p>
+      <div class="tf-options">
+        <button class="tf-btn verdadeiro" onclick="checkTF(this,'tf5_4',false)">👍 Verdadeiro</button>
+        <button class="tf-btn falso" onclick="checkTF(this,'tf5_4',false)">👎 Falso</button>
+      </div>
+      <div class="feedback" id="fb_tf5_4"></div>
+    </div>
+
+    <div class="quiz-question" id="tf5_5">
+      <p>5. A IA Generativa pode criar imagens, músicas e textos do zero?</p>
+      <div class="tf-options">
+        <button class="tf-btn verdadeiro" onclick="checkTF(this,'tf5_5',true)">👍 Verdadeiro</button>
+        <button class="tf-btn falso" onclick="checkTF(this,'tf5_5',true)">👎 Falso</button>
+      </div>
+      <div class="feedback" id="fb_tf5_5"></div>
+    </div>
+  </div>
+
+  <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin:2rem 0;">
+    <a href="atividades-modulo4.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:white;color:var(--escuro);border:3px solid var(--escuro);border-radius:30px;padding:0.7rem 1.5rem;font-family:'Baloo 2',cursive;font-weight:800;font-size:1rem;text-decoration:none;box-shadow:0 4px 0 rgba(0,0,0,0.12);">← Atividade anterior</a>
+    <a href="aulas-modulo5.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--rosa);color:white;border:3px solid var(--escuro);border-radius:30px;padding:0.7rem 1.5rem;font-family:'Baloo 2',cursive;font-weight:800;font-size:1rem;text-decoration:none;box-shadow:0 4px 0 #c43d75;">📚 Estudar este Módulo</a>
+    <a href="atividades.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--escuro);color:var(--amarelo);border:3px solid var(--escuro);border-radius:30px;padding:0.7rem 1.5rem;font-family:'Baloo 2',cursive;font-weight:800;font-size:1rem;text-decoration:none;box-shadow:0 4px 0 rgba(0,0,0,0.2);">🎮 Todas as Atividades</a>
+  </div>
+</div>
+
+<div class="medal-overlay" id="medalOverlay">
+  <div class="medal-modal">
+    <span class="medal-emoji" id="modalEmoji">🏅</span>
+    <h2>Medalha Conquistada!</h2>
+    <p id="modalDesc">Você completou o desafio com sucesso!</p>
+    <div class="medal-name-badge" id="modalMedalName">🏆 Medalha</div>
+    <div class="modal-btns">
+      <button class="btn-modal-close" onclick="closeMedalModal()">🎉 Continuar!</button>
+      <a href="conquistas.html" class="btn-modal-conquistas">🏆 Ver Conquistas</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>🖥️ <strong>DigiTurma</strong> • 2026</p>
+</footer>
+
+<script src="script/global.js"></script>
+<script>
+  const _saved = JSON.parse(localStorage.getItem('digiturma') || '{}');
+  let totalScore   = _saved.totalScore   || 0;
+  let correctCount = _saved.correctCount || 0;
+  let medalCount   = (_saved.medals || []).length;
+  const answeredQuestions = new Set(_saved.answeredQuestions || []);
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('total-score').textContent   = totalScore;
+    document.getElementById('correct-count').textContent = correctCount;
+    document.getElementById('medal-count').textContent   = medalCount;
+    answeredQuestions.forEach(qId => restoreAnswered(qId));
+
+    const _earned = new Set((_saved.medals || []).map(m => m.name));
+    Object.entries(quizGroups).forEach(([gKey, ids]) => {
+      const def = medalDefs[gKey];
+      if (def && _earned.has(def.name))
+        ids.forEach(qId => { if (!answeredQuestions.has(qId)) revealCorrectAnswer(qId, gKey); });
+    });
+    if (medalDefs['match_5'] && _earned.has(medalDefs['match_5'].name)) revealDropdownMatch('dm5');
+  });
+
+  const medalDefs = {
+    quiz_5:  { emoji: '🤖', name: 'Especialista em IA',   desc: 'Você acertou todas as perguntas do Quiz do Módulo 5!' },
+    tf_5:    { emoji: '💡', name: 'Pensador do Futuro',    desc: 'Você acertou todos os Verdadeiro ou Falso do Módulo 5!' },
+    match_5: { emoji: '🚀', name: 'Explorador Digital',   desc: 'Você identificou o tipo correto de cada uso de IA!' },
+  };
+
+  const quizGroups = {
+    quiz_5: ['q5_1','q5_2','q5_3','q5_4','q5_5'],
+    tf_5:   ['tf5_1','tf5_2','tf5_3','tf5_4','tf5_5'],
+  };
+
+  const groupCorrect = {};
+  Object.keys(quizGroups).forEach(g => groupCorrect[g] = 0);
+
+  function updateScore(pts) {
+    totalScore += pts;
+    if (pts > 0) correctCount++;
+    document.getElementById('total-score').textContent = totalScore;
+    document.getElementById('correct-count').textContent = correctCount;
+    saveProgress();
+  }
+
+  function saveProgress(qId, answerInfo) {
+    const data = JSON.parse(localStorage.getItem('digiturma') || '{}');
+    data.totalScore        = totalScore;
+    data.correctCount      = correctCount;
+    data.medalCount        = medalCount;
+    data.medals            = data.medals || [];
+    data.answeredQuestions = [...answeredQuestions];
+    if (qId && answerInfo) {
+      data.answers = data.answers || {};
+      data.answers[qId] = answerInfo;
+    }
+    localStorage.setItem('digiturma', JSON.stringify(data));
+  }
+
+  function restoreAnswered(qId) {
+    const container = document.getElementById(qId);
+    if (!container) return;
+    container.querySelectorAll('button').forEach(b => b.disabled = true);
+    const saved = JSON.parse(localStorage.getItem('digiturma') || '{}');
+    const info = (saved.answers || {})[qId];
+    const fb = document.getElementById('fb_' + qId);
+    if (info && info.correct) {
+      if (info.type === 'quiz') {
+        const letters = ['A','B','C','D'];
+        container.querySelectorAll('.option-btn').forEach((b, i) => { if (letters[i] === info.correctKey) b.classList.add('correct'); });
+      } else if (info.type === 'tf') {
+        container.querySelectorAll('.tf-btn').forEach(b => { if (b.classList.contains('verdadeiro') === info.correctKey) b.classList.add('correct'); });
+      }
+      if (fb) { fb.className = 'feedback correct-fb show'; fb.innerHTML = '✅ Você acertou esta questão!'; }
+    } else if (info && !info.correct) {
+      if (info.type === 'quiz') {
+        const letters = ['A','B','C','D'];
+        container.querySelectorAll('.option-btn').forEach((b, i) => {
+          if (letters[i] === info.chosenKey) b.classList.add('wrong');
+          if (letters[i] === info.correctKey) b.classList.add('correct');
+        });
+      } else if (info.type === 'tf') {
+        container.querySelectorAll('.tf-btn').forEach(b => {
+          const isVerd = b.classList.contains('verdadeiro');
+          if (isVerd === info.chosenKey) b.classList.add('wrong');
+          if (isVerd === info.correctKey) b.classList.add('correct');
+        });
+      }
+      if (fb) { fb.className = 'feedback wrong-fb show'; fb.innerHTML = `❌ Você errou. A resposta correta está destacada em verde. <a href="aulas-modulo5.html" style="color:#721c24;font-weight:800;text-decoration:underline;">📚 Estudar: IA</a>`; }
+    } else {
+      if (fb) { fb.className = 'feedback show'; fb.style.cssText = 'background:#f0f0f0;border-color:#ccc;color:#666;display:flex;align-items:center;gap:0.5rem;'; fb.innerHTML = '🔒 Questão já respondida.'; }
+    }
+  }
+
+  function revealCorrectAnswer(qId, groupKey) {
+    const container = document.getElementById(qId);
+    if (!container) return;
+    container.querySelectorAll('button').forEach(b => b.disabled = true);
+    const fb = document.getElementById('fb_' + qId);
+    if (groupKey.startsWith('quiz_')) {
+      const btns = container.querySelectorAll('.option-btn');
+      const m = (btns[0]?.getAttribute('onclick') || '').match(/'([A-D])'\)/);
+      if (!m) return;
+      const letters = ['A','B','C','D'];
+      btns.forEach((b, i) => { if (letters[i] === m[1]) b.classList.add('correct'); });
+    } else if (groupKey.startsWith('tf_')) {
+      const btns = container.querySelectorAll('.tf-btn');
+      const m = (btns[0]?.getAttribute('onclick') || '').match(/,(true|false)\)/);
+      if (!m) return;
+      const correctAnswer = m[1] === 'true';
+      btns.forEach(b => { if (b.classList.contains('verdadeiro') === correctAnswer) b.classList.add('correct'); });
+    }
+    if (fb) { fb.className = 'feedback correct-fb show'; fb.innerHTML = '🔍 Revisão: resposta correta destacada em verde.'; }
+  }
+
+  function revealMatchPairs(resultId) {
+    const resultEl = document.getElementById(resultId);
+    if (!resultEl) return;
+    const container = resultEl.previousElementSibling;
+    if (!container || !container.classList.contains('match-container')) return;
+    container.querySelectorAll('[data-match="left"]').forEach(left => {
+      const right = container.querySelector(`[data-match="right"][data-id="${left.dataset.id}"]`);
+      if (right) {
+        left.classList.add('matched-correct'); right.classList.add('matched-correct');
+        left.style.pointerEvents = 'none'; right.style.pointerEvents = 'none';
+      }
+    });
+    resultEl.innerHTML = '🏆 Você já conquistou esta medalha! Confira os pares corretos acima.';
+    resultEl.style.color = '#28a745';
+  }
+
+  function awardMedal(key) {
+    const def = medalDefs[key];
+    if (!def) return;
+    const data = JSON.parse(localStorage.getItem('digiturma') || '{}');
+    data.medals = data.medals || [];
+    if (data.medals.find(m => m.name === def.name)) return;
+    data.medals.push({ ...def, date: new Date().toLocaleDateString('pt-BR') });
+    data.medalCount = data.medals.length;
+    localStorage.setItem('digiturma', JSON.stringify(data));
+    medalCount++;
+    document.getElementById('medal-count').textContent = medalCount;
+    document.getElementById('modalEmoji').textContent     = def.emoji;
+    document.getElementById('modalMedalName').textContent = def.emoji + ' ' + def.name;
+    document.getElementById('modalDesc').textContent      = def.desc;
+    document.getElementById('medalOverlay').classList.add('show');
+  }
+
+  function closeMedalModal() { document.getElementById('medalOverlay').classList.remove('show'); }
+  document.getElementById('medalOverlay').addEventListener('click', function(e) { if (e.target === this) closeMedalModal(); });
+
+  function checkGroupComplete(questionId) {
+    for (const [groupKey, ids] of Object.entries(quizGroups)) {
+      if (!ids.includes(questionId)) continue;
+      const allAnswered = ids.every(id => answeredQuestions.has(id));
+      if (!allAnswered) return;
+      if (groupCorrect[groupKey] === ids.length) setTimeout(() => awardMedal(groupKey), 600);
+    }
+  }
+
+  function checkQuiz(btn, questionId, correctLetter) {
+    const container = document.getElementById(questionId);
+    const buttons   = container.querySelectorAll('.option-btn');
+    const letters   = ['A','B','C','D'];
+    const clickedLetter = letters[Array.from(buttons).indexOf(btn)];
+    const feedback  = document.getElementById('fb_' + questionId);
+    if (answeredQuestions.has(questionId)) return;
+    buttons.forEach(b => b.disabled = true);
+    if (clickedLetter === correctLetter) {
+      answeredQuestions.add(questionId);
+      btn.classList.add('correct');
+      feedback.className = 'feedback correct-fb show';
+      feedback.innerHTML = '✅ Correto! Muito bem!';
+      updateScore(10);
+      saveProgress(questionId, { type:'quiz', correct:true, correctKey:correctLetter, chosenKey:clickedLetter });
+      for (const [g, ids] of Object.entries(quizGroups)) { if (ids.includes(questionId)) { groupCorrect[g]++; break; } }
+      checkGroupComplete(questionId);
+    } else {
+      feedback.className = 'feedback wrong-fb show';
+      feedback.innerHTML = `❌ Ops! Essa não era a certa. Tente de novo! <a href="aulas-modulo5.html" style="color:#721c24;font-weight:800;text-decoration:underline;">📚 Estudar: IA</a>`;
+      setTimeout(() => {
+        buttons.forEach(b => { b.disabled = false; b.classList.remove('wrong'); });
+        feedback.classList.remove('show');
+      }, 1800);
+    }
+  }
+
+  function checkTF(btn, questionId, correctAnswer) {
+    const container    = document.getElementById(questionId);
+    const tfBtns       = container.querySelectorAll('.tf-btn');
+    const feedback     = document.getElementById('fb_' + questionId);
+    const isVerdadeiro = btn.classList.contains('verdadeiro');
+    if (answeredQuestions.has(questionId)) return;
+    tfBtns.forEach(b => b.disabled = true);
+    if (isVerdadeiro === correctAnswer) {
+      answeredQuestions.add(questionId);
+      btn.classList.add('correct');
+      feedback.className = 'feedback correct-fb show';
+      feedback.innerHTML = '✅ Correto! Você acertou!';
+      updateScore(8);
+      saveProgress(questionId, { type:'tf', correct:true, correctKey:correctAnswer, chosenKey:isVerdadeiro });
+      for (const [g, ids] of Object.entries(quizGroups)) { if (ids.includes(questionId)) { groupCorrect[g]++; break; } }
+      checkGroupComplete(questionId);
+    } else {
+      feedback.className = 'feedback wrong-fb show';
+      feedback.innerHTML = `❌ Ops! Essa não era a certa. Tente de novo! <a href="aulas-modulo5.html" style="color:#721c24;font-weight:800;text-decoration:underline;">📚 Estudar: IA</a>`;
+      setTimeout(() => {
+        tfBtns.forEach(b => { b.disabled = false; b.classList.remove('wrong'); });
+        feedback.classList.remove('show');
+      }, 1800);
+    }
+  }
+
+  // ── Dropdown Match ────────────────────────────────────────────────────────
+  function checkDropdownMatch(dmId, medalKey) {
+    const container = document.getElementById(dmId);
+    const selects = container.querySelectorAll('.dm-select');
+    let allFilled = true, allCorrect = true;
+    selects.forEach(sel => { if (!sel.value) allFilled = false; });
+    const res = document.getElementById(dmId + '-result');
+    if (!allFilled) {
+      res.innerHTML = '⚠️ Selecione uma resposta para cada item antes de verificar!';
+      res.style.color = '#d4a800';
+      return;
+    }
+    selects.forEach(sel => {
+      sel.classList.remove('correct', 'wrong');
+      if (sel.value === sel.dataset.correct) sel.classList.add('correct');
+      else { sel.classList.add('wrong'); allCorrect = false; }
+    });
+    if (allCorrect) {
+      selects.forEach(sel => sel.disabled = true);
+      res.innerHTML = '🏆 Parabéns! Você acertou tudo!';
+      res.style.color = '#28a745';
+      updateScore(5 * selects.length);
+      setTimeout(() => awardMedal(medalKey), 400);
+    } else {
+      res.innerHTML = '❌ Algumas respostas estão erradas. Corrija e tente novamente!';
+      res.style.color = '#dc3545';
+      setTimeout(() => {
+        selects.forEach(sel => { if (sel.classList.contains('wrong')) { sel.classList.remove('wrong'); sel.value = ''; } });
+        res.innerHTML = '';
+      }, 2000);
+    }
+  }
+
+  function revealDropdownMatch(dmId) {
+    const container = document.getElementById(dmId);
+    if (!container) return;
+    container.querySelectorAll('.dm-select').forEach(sel => {
+      sel.value = sel.dataset.correct;
+      sel.classList.add('correct');
+      sel.disabled = true;
+    });
+    const res = document.getElementById(dmId + '-result');
+    if (res) { res.innerHTML = '🏆 Você já conquistou esta medalha! Veja as respostas corretas acima.'; res.style.color = '#28a745'; }
+  }
+</script>
+</body>
+</html>

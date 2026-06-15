@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="digiturma.png">
+<title>Conquistas - DigiTurma</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style/global.css">
+<link rel="stylesheet" href="style/conquistas.css">
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html">🖥️ Digi<span>Turma</span></a>
+  <button class="hamburger" onclick="toggleNav()" aria-label="Menu"><span></span><span></span><span></span></button>
+  <div class="nav-links">
+    <a href="index.html">🏠 Início</a>
+    <a href="aulas.html">📚 Aulas</a>
+    <a href="atividades.html">🎮 Atividades</a>
+    <a href="glossario.html">📖 Glossário</a>
+    <a href="conquistas.html" class="active">🏆 Conquistas</a>
+    <a href="sobre.html">ℹ️ Sobre</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1>🏆 Minhas Conquistas</h1>
+  <p>Veja sua pontuação e as medalhas que você conquistou!</p>
+</div>
+
+<div class="container">
+
+  <!-- SCORE CARDS -->
+  <div class="score-grid">
+    <div class="score-card">
+      <span class="sc-icon">⭐</span>
+      <div class="sc-num" id="sc-pts">0</div>
+      <div class="sc-label">Pontos</div>
+    </div>
+    <div class="score-card">
+      <span class="sc-icon">✅</span>
+      <div class="sc-num" id="sc-acertos">0</div>
+      <div class="sc-label">Acertos</div>
+    </div>
+    <div class="score-card">
+      <span class="sc-icon">🏅</span>
+      <div class="sc-num" id="sc-medals">0</div>
+      <div class="sc-label">Medalhas</div>
+    </div>
+  </div>
+
+  <!-- MEDALS -->
+  <div class="sec-title">🏅 Medalhas</div>
+  <div class="medals-grid" id="medalsGrid"></div>
+
+  <div style="text-align:center; margin-top: 1rem;">
+    <a href="atividades.html" class="btn-go">🎮 Jogar Atividades</a>
+    <br>
+    <button class="btn-reset" onclick="confirmReset()">🗑️ Resetar Progresso</button>
+  </div>
+
+</div>
+
+<footer>
+  <p>🖥️ <strong>DigiTurma</strong> • 2026</p>
+</footer>
+
+<script src="script/global.js"></script>
+<script>
+  // Todas as medalhas possíveis
+  const allMedals = [
+    { emoji: '🌟', name: 'Gênio do Computador',   desc: 'Acerte todas as perguntas do Quiz do Módulo 1' },
+    { emoji: '✅', name: 'Detetive do Computador', desc: 'Acerte todos os Verdadeiro ou Falso do Módulo 1' },
+    { emoji: '🖥️', name: 'Mestre das Peças',      desc: 'Complete o jogo de ligar do Módulo 1' },
+    { emoji: '⚡', name: 'Craque do Teclado',     desc: 'Acerte todas as perguntas do Quiz do Módulo 2' },
+    { emoji: '🎹', name: 'Dedo de Ouro',           desc: 'Acerte todos os Verdadeiro ou Falso do Módulo 2' },
+    { emoji: '⌨️', name: 'Rei dos Atalhos',        desc: 'Complete o jogo de ligar do Módulo 2' },
+    { emoji: '🔒', name: 'Guardião da Net',        desc: 'Acerte todas as perguntas do Quiz do Módulo 3' },
+    { emoji: '🛡️', name: 'Protetor Digital',       desc: 'Acerte todos os Verdadeiro ou Falso do Módulo 3' },
+    { emoji: '🌐', name: 'Navegador Seguro',       desc: 'Complete o jogo de ligar do Módulo 3' },
+    { emoji: '🖌️', name: 'Artista Digital',        desc: 'Acerte todas as perguntas do Quiz do Módulo 4' },
+    { emoji: '📂', name: 'Organizador Master',     desc: 'Acerte todos os Verdadeiro ou Falso do Módulo 4' },
+    { emoji: '🎨', name: 'Criador Digital',        desc: 'Complete o jogo de ligar do Módulo 4' },
+    { emoji: '🤖', name: 'Especialista em IA',     desc: 'Acerte todas as perguntas do Quiz do Módulo 5' },
+    { emoji: '💡', name: 'Pensador do Futuro',      desc: 'Acerte todos os Verdadeiro ou Falso do Módulo 5' },
+    { emoji: '🚀', name: 'Explorador Digital',      desc: 'Complete o jogo de ligar do Módulo 5' },
+  ];
+
+  function loadData() {
+    const data = JSON.parse(localStorage.getItem('digiturma') || '{}');
+    const earnedMedals = data.medals || [];
+
+    document.getElementById('sc-pts').textContent     = data.totalScore   || 0;
+    document.getElementById('sc-acertos').textContent = data.correctCount || 0;
+    document.getElementById('sc-medals').textContent  = earnedMedals.length;
+
+    const grid = document.getElementById('medalsGrid');
+    grid.innerHTML = '';
+
+    allMedals.forEach(m => {
+      const earned = earnedMedals.find(e => e.name === m.name);
+      const card = document.createElement('div');
+      card.className = 'medal-card ' + (earned ? 'unlocked' : 'locked');
+      card.innerHTML = `
+        <span class="mc-emoji">${m.emoji}</span>
+        <h4>${m.name}</h4>
+        <p>${earned ? earned.desc : m.desc}</p>
+        ${earned
+          ? `<span class="mc-date">📅 ${earned.date}</span>`
+          : `<span class="mc-locked-label">🔒 Bloqueada</span>`}
+      `;
+      grid.appendChild(card);
+    });
+  }
+
+  function confirmReset() {
+    if (confirm('Tem certeza que quer apagar todo o seu progresso?')) {
+      localStorage.removeItem('digiturma');
+      loadData();
+    }
+  }
+
+  loadData();
+</script>
+</body>
+</html>

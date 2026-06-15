@@ -1,0 +1,83 @@
+.page-header { background: linear-gradient(135deg, var(--roxo), var(--rosa)); }
+.container { max-width: 860px; margin: 0 auto; padding: 2.5rem 1.5rem; }
+
+/* SCORE CARDS */
+.score-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+.score-card {
+  background: white; border-radius: 20px; padding: 1.5rem 1rem;
+  border: 3px solid var(--escuro); box-shadow: var(--card-shadow);
+  text-align: center;
+}
+.score-card .sc-icon { font-size: 2.2rem; display: block; margin-bottom: 0.4rem; }
+.score-card .sc-num { font-family: 'Baloo 2', cursive; font-size: 2.5rem; font-weight: 800; line-height: 1; }
+.score-card .sc-label { font-size: 0.85rem; color: #666; font-weight: 700; margin-top: 0.2rem; }
+.score-card:nth-child(1) .sc-num { color: var(--laranja); }
+.score-card:nth-child(2) .sc-num { color: var(--verde); }
+.score-card:nth-child(3) .sc-num { color: var(--roxo); }
+
+/* SECTION TITLE */
+.sec-title {
+  font-family: 'Baloo 2', cursive; font-size: 1.6rem; font-weight: 800;
+  margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.5rem;
+}
+
+/* MEDAL CARDS */
+.medals-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 1.2rem; margin-bottom: 3rem;
+}
+.medal-card {
+  background: white; border-radius: 20px; padding: 1.8rem 1rem;
+  border: 3px solid var(--escuro); box-shadow: var(--card-shadow);
+  text-align: center; transition: transform 0.2s;
+}
+.medal-card:hover { transform: translateY(-4px); }
+.medal-card.locked { opacity: 0.45; filter: grayscale(1); }
+.medal-card .mc-emoji { font-size: 3.2rem; display: block; margin-bottom: 0.8rem; }
+.medal-card h4 { font-family: 'Baloo 2', cursive; font-size: 1rem; font-weight: 800; margin-bottom: 0.4rem; }
+.medal-card p { font-size: 0.8rem; color: #666; line-height: 1.4; }
+.medal-card .mc-date {
+  display: inline-block; margin-top: 0.8rem; padding: 0.2rem 0.8rem;
+  background: var(--amarelo); border-radius: 20px; font-size: 0.85rem;
+  font-weight: 800; color: var(--escuro); border: 1.5px solid var(--escuro);
+}
+.medal-card .mc-locked-label {
+  display: inline-block; margin-top: 0.8rem; padding: 0.2rem 0.8rem;
+  background: #eee; border-radius: 20px; font-size: 0.85rem;
+  font-weight: 800; color: #999; border: 1.5px solid #ccc;
+}
+.medal-card.unlocked { border-color: var(--amarelo); box-shadow: 0 6px 0 rgba(255,217,61,0.4); }
+
+/* EMPTY STATE */
+.empty-state {
+  text-align: center; padding: 3rem 2rem;
+  background: white; border-radius: 20px; border: 3px dashed #ddd;
+}
+.empty-state .es-icon { font-size: 4rem; display: block; margin-bottom: 1rem; }
+.empty-state h3 { font-family: 'Baloo 2', cursive; font-size: 1.4rem; margin-bottom: 0.5rem; }
+.empty-state p { color: #666; margin-bottom: 1.5rem; }
+
+.btn-go {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: var(--verde); color: white; border: none; border-radius: 30px;
+  padding: 0.7rem 1.8rem; font-family: 'Baloo 2', cursive; font-size: 1rem; font-weight: 700;
+  cursor: pointer; box-shadow: 0 4px 0 #04a07a; transition: all 0.2s; text-decoration: none;
+}
+.btn-go:hover { transform: translateY(-2px); }
+
+.btn-reset {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: #f8d7da; color: #721c24; border: 2px solid #dc3545; border-radius: 30px;
+  padding: 0.5rem 1.2rem; font-family: 'Baloo 2', cursive; font-size: 0.9rem; font-weight: 700;
+  cursor: pointer; transition: all 0.2s; margin-top: 1rem;
+}
+.btn-reset:hover { background: #dc3545; color: white; }
+
+@media (max-width: 600px) {
+  .score-grid { grid-template-columns: 1fr 1fr 1fr; gap: 0.8rem; }
+  .score-card .sc-num { font-size: 1.8rem; }
+  .medals-grid { grid-template-columns: repeat(2, 1fr); }
+}

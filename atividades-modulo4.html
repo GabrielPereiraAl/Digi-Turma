@@ -1,0 +1,602 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="digiturma.png">
+<title>Atividades — Módulo 4: Criando com PC - DigiTurma</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style/global.css">
+<link rel="stylesheet" href="style/atividades-modulo.css">
+</head>
+<body>
+<nav>
+  <a class="logo" href="index.html">🖥️ Digi<span>Turma</span></a>
+  <button class="hamburger" onclick="toggleNav()" aria-label="Menu"><span></span><span></span><span></span></button>
+  <div class="nav-links">
+    <a href="index.html">🏠 Início</a>
+    <a href="aulas.html">📚 Aulas</a>
+    <a href="atividades.html">🎮 Atividades</a>
+    <a href="glossario.html">📖 Glossário</a>
+    <a href="conquistas.html">🏆 Conquistas</a>
+    <a href="sobre.html">ℹ️ Sobre</a>
+  </div>
+</nav>
+
+<div class="page-header" style="background:linear-gradient(135deg, var(--roxo), var(--rosa));">
+  <h1>🎨 Módulo 4 — Criando com PC</h1>
+  <p>Teste seus conhecimentos e ganhe medalhas!</p>
+</div>
+
+<div class="scoreboard">
+  <div class="score-item">
+    <div class="score-num" id="total-score">0</div>
+    <div class="score-label">Pontos</div>
+  </div>
+  <div class="score-item">
+    <div class="score-num" id="correct-count">0</div>
+    <div class="score-label">Acertos</div>
+  </div>
+  <div class="score-item">
+    <div class="score-num" id="medal-count">0</div>
+    <div class="score-label">Medalhas</div>
+  </div>
+</div>
+
+<div class="activities-container">
+<div class="module-header">
+      <div class="module-header-icon">🎨</div>
+      <div>
+        <h2>Módulo 4 — Criando com o PC</h2>
+        <p>Prove que você sabe usar os programas do computador!</p>
+      </div>
+    </div>
+
+    <!-- Atividade 4.1 - Quiz -->
+    <div class="activity-card">
+      <div class="activity-title">🎯 Quiz — Criando com o PC</div>
+      <div class="activity-subtitle">Múltipla escolha • 5 questões • 10 pontos cada</div>
+
+      <div class="quiz-question" id="q4_1">
+        <p>1. Qual programa usamos para ESCREVER textos e histórias?</p>
+        <div class="options">
+          <button class="option-btn" onclick="checkQuiz(this,'q4_1','B')"><span class="option-letter">A</span> Paint</button>
+          <button class="option-btn" onclick="checkQuiz(this,'q4_1','B')"><span class="option-letter">B</span> Word (ou Writer)</button>
+          <button class="option-btn" onclick="checkQuiz(this,'q4_1','B')"><span class="option-letter">C</span> Excel</button>
+          <button class="option-btn" onclick="checkQuiz(this,'q4_1','B')"><span class="option-letter">D</span> Chrome</button>
+        </div>
+        <div class="feedback" id="fb_q4_1"></div>
+      </div>
+
+      <div class="quiz-question" id="q4_2">
+        <p>2. Para criar DESENHOS e pinturas no computador, qual programa usamos?</p>
+        <div class="options">
+          <button class="option-btn" onclick="checkQuiz(this,'q4_2','A')"><span class="option-letter">A</span> Paint</button>
+          <button class="option-btn" onclick="checkQuiz(this,'q4_2','A')"><span class="option-letter">B</span> PowerPoint</button>
+          <button class="option-btn" onclick="checkQuiz(this,'q4_2','A')"><span class="option-letter">C</span> Excel</button>
+          <button class="option-btn" onclick="checkQuiz(this,'q4_2','A')"><span class="option-letter">D</span> Word</button>
+        </div>
+        <div class="feedback" id="fb_q4_2"></div>
+      </div>
+
+      <div class="quiz-question" id="q4_3">
+        <p>3. No Word, qual atalho deixa o texto em NEGRITO?</p>
+        <div class="options">
+          <button class="option-btn" onclick="checkQuiz(this,'q4_3','D')"><span class="option-letter">A</span> Ctrl + I</button>
+          <button class="option-btn" onclick="checkQuiz(this,'q4_3','D')"><span class="option-letter">B</span> Ctrl + U</button>
+          <button class="option-btn" onclick="checkQuiz(this,'q4_3','D')"><span class="option-letter">C</span> Ctrl + N</button>
+          <button class="option-btn" onclick="checkQuiz(this,'q4_3','D')"><span class="option-letter">D</span> Ctrl + B</button>
+        </div>
+        <div class="feedback" id="fb_q4_3"></div>
+      </div>
+
+      <div class="quiz-question" id="q4_4">
+        <p>4. O que é uma PASTA no computador?</p>
+        <div class="options">
+          <button class="option-btn" onclick="checkQuiz(this,'q4_4','C')"><span class="option-letter">A</span> Um tipo de vírus</button>
+          <button class="option-btn" onclick="checkQuiz(this,'q4_4','C')"><span class="option-letter">B</span> Um programa para fazer cálculos</button>
+          <button class="option-btn" onclick="checkQuiz(this,'q4_4','C')"><span class="option-letter">C</span> Um lugar para organizar e guardar arquivos</button>
+          <button class="option-btn" onclick="checkQuiz(this,'q4_4','C')"><span class="option-letter">D</span> A tela inicial do Windows</button>
+        </div>
+        <div class="feedback" id="fb_q4_4"></div>
+      </div>
+
+      <div class="quiz-question" id="q4_5">
+        <p>5. Qual programa usamos para criar APRESENTAÇÕES com slides?</p>
+        <div class="options">
+          <button class="option-btn" onclick="checkQuiz(this,'q4_5','B')"><span class="option-letter">A</span> Word</button>
+          <button class="option-btn" onclick="checkQuiz(this,'q4_5','B')"><span class="option-letter">B</span> PowerPoint (ou Google Slides)</button>
+          <button class="option-btn" onclick="checkQuiz(this,'q4_5','B')"><span class="option-letter">C</span> Paint</button>
+          <button class="option-btn" onclick="checkQuiz(this,'q4_5','B')"><span class="option-letter">D</span> Bloco de Notas</button>
+        </div>
+        <div class="feedback" id="fb_q4_5"></div>
+      </div>
+
+      </div>
+    </div>
+
+    <!-- Atividade 4.2 - Qual programa usar? -->
+    <div class="activity-card">
+      <div class="activity-title">💻 Qual programa usar?</div>
+      <div class="activity-subtitle">Selecione o programa correto para cada tarefa • 4 pares • 5 pontos cada</div>
+      <div class="dropdown-match" id="dm4">
+        <div class="dm-row">
+          <div class="dm-label">Escrever textos e documentos</div>
+          <select class="dm-select" data-correct="word">
+            <option value="">— Selecione —</option>
+            <option value="word">📝 Word</option>
+            <option value="paint">🎨 Paint</option>
+            <option value="excel">📊 Excel</option>
+            <option value="ppt">🖼️ PowerPoint</option>
+          </select>
+        </div>
+        <div class="dm-row">
+          <div class="dm-label">Desenhar e colorir imagens</div>
+          <select class="dm-select" data-correct="paint">
+            <option value="">— Selecione —</option>
+            <option value="word">📝 Word</option>
+            <option value="paint">🎨 Paint</option>
+            <option value="excel">📊 Excel</option>
+            <option value="ppt">🖼️ PowerPoint</option>
+          </select>
+        </div>
+        <div class="dm-row">
+          <div class="dm-label">Fazer tabelas e cálculos</div>
+          <select class="dm-select" data-correct="excel">
+            <option value="">— Selecione —</option>
+            <option value="word">📝 Word</option>
+            <option value="paint">🎨 Paint</option>
+            <option value="excel">📊 Excel</option>
+            <option value="ppt">🖼️ PowerPoint</option>
+          </select>
+        </div>
+        <div class="dm-row">
+          <div class="dm-label">Criar slides e apresentações</div>
+          <select class="dm-select" data-correct="ppt">
+            <option value="">— Selecione —</option>
+            <option value="word">📝 Word</option>
+            <option value="paint">🎨 Paint</option>
+            <option value="excel">📊 Excel</option>
+            <option value="ppt">🖼️ PowerPoint</option>
+          </select>
+        </div>
+      </div>
+      <div style="margin-top:1.2rem;display:flex;gap:1rem;flex-wrap:wrap;align-items:center;">
+        <button class="check-btn" onclick="checkDropdownMatch('dm4','match_4')">✅ Verificar respostas</button>
+        <div id="dm4-result" style="font-weight:700;font-size:0.95rem;"></div>
+      </div>
+    </div>
+
+    <!-- Atividade 4.3 - Verdadeiro ou Falso -->
+    <div class="activity-card">
+      <div class="activity-title">✅ Verdadeiro ou Falso? — Criando com PC</div>
+      <div class="activity-subtitle">5 questões • 8 pontos cada</div>
+
+      <div class="quiz-question" id="tf4_1">
+        <p>1. Ctrl + S serve para salvar um arquivo?</p>
+        <div class="tf-options">
+          <button class="tf-btn verdadeiro" onclick="checkTF(this,'tf4_1',true)">👍 Verdadeiro</button>
+          <button class="tf-btn falso" onclick="checkTF(this,'tf4_1',true)">👎 Falso</button>
+        </div>
+        <div class="feedback" id="fb_tf4_1"></div>
+      </div>
+
+      <div class="quiz-question" id="tf4_2">
+        <p>2. A Lixeira guarda os arquivos deletados antes de apagá-los de vez?</p>
+        <div class="tf-options">
+          <button class="tf-btn verdadeiro" onclick="checkTF(this,'tf4_2',true)">👍 Verdadeiro</button>
+          <button class="tf-btn falso" onclick="checkTF(this,'tf4_2',true)">👎 Falso</button>
+        </div>
+        <div class="feedback" id="fb_tf4_2"></div>
+      </div>
+
+      <div class="quiz-question" id="tf4_3">
+        <p>3. No Paint, o "balde de tinta" serve para desenhar linhas finas?</p>
+        <div class="tf-options">
+          <button class="tf-btn verdadeiro" onclick="checkTF(this,'tf4_3',false)">👍 Verdadeiro</button>
+          <button class="tf-btn falso" onclick="checkTF(this,'tf4_3',false)">👎 Falso</button>
+        </div>
+        <div class="feedback" id="fb_tf4_3"></div>
+      </div>
+
+      <div class="quiz-question" id="tf4_4">
+        <p>4. Uma apresentação de slides pode ter quantas páginas forem necessárias?</p>
+        <div class="tf-options">
+          <button class="tf-btn verdadeiro" onclick="checkTF(this,'tf4_4',true)">👍 Verdadeiro</button>
+          <button class="tf-btn falso" onclick="checkTF(this,'tf4_4',true)">👎 Falso</button>
+        </div>
+        <div class="feedback" id="fb_tf4_4"></div>
+      </div>
+
+      <div class="quiz-question" id="tf4_5">
+        <p>5. Desktop é o nome dado à área de trabalho do computador?</p>
+        <div class="tf-options">
+          <button class="tf-btn verdadeiro" onclick="checkTF(this,'tf4_5',true)">👍 Verdadeiro</button>
+          <button class="tf-btn falso" onclick="checkTF(this,'tf4_5',true)">👎 Falso</button>
+        </div>
+        <div class="feedback" id="fb_tf4_5"></div>
+      </div>
+</div>
+
+<div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin:2rem 0;"><a href="atividades-modulo3.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:white;color:var(--escuro);border:3px solid var(--escuro);border-radius:30px;padding:0.7rem 1.5rem;font-family:'Baloo 2',cursive;font-weight:800;font-size:1rem;text-decoration:none;box-shadow:0 4px 0 rgba(0,0,0,0.12);">← Atividade anterior</a><a href="aulas-modulo4.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--azul);color:white;border:3px solid var(--escuro);border-radius:30px;padding:0.7rem 1.5rem;font-family:'Baloo 2',cursive;font-weight:800;font-size:1rem;text-decoration:none;box-shadow:0 4px 0 #0c6a8a;">📚 Estudar este Módulo</a><a href="atividades.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--escuro);color:var(--amarelo);border:3px solid var(--escuro);border-radius:30px;padding:0.7rem 1.5rem;font-family:'Baloo 2',cursive;font-weight:800;font-size:1rem;text-decoration:none;box-shadow:0 4px 0 rgba(0,0,0,0.2);">🎮 Todas as Atividades</a><a href="atividades-modulo5.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--rosa);color:white;border:3px solid var(--escuro);border-radius:30px;padding:0.7rem 1.5rem;font-family:'Baloo 2',cursive;font-weight:800;font-size:1rem;text-decoration:none;box-shadow:0 4px 0 #c43d75;">Próxima atividade →</a></div>
+
+<div class="medal-overlay" id="medalOverlay">
+  <div class="medal-modal">
+    <span class="medal-emoji" id="modalEmoji">🏅</span>
+    <h2>Medalha Conquistada!</h2>
+    <p id="modalDesc">Você completou o desafio com sucesso!</p>
+    <div class="medal-name-badge" id="modalMedalName">🏆 Medalha</div>
+    <div class="modal-btns">
+      <button class="btn-modal-close" onclick="closeMedalModal()">🎉 Continuar!</button>
+      <a href="conquistas.html" class="btn-modal-conquistas">🏆 Ver Conquistas</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>🖥️ <strong>DigiTurma</strong> • 2026</p>
+</footer>
+
+<script src="script/global.js"></script>
+<script>
+  // ── Carrega progresso salvo ────────────────────────────────────────────────
+  const _saved = JSON.parse(localStorage.getItem('digiturma') || '{}');
+  let totalScore   = _saved.totalScore   || 0;
+  let correctCount = _saved.correctCount || 0;
+  let medalCount   = (_saved.medals || []).length;
+  const answeredQuestions = new Set(_saved.answeredQuestions || []);
+
+  // Atualiza placar imediatamente com dados salvos
+  document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('total-score').textContent   = totalScore;
+    document.getElementById('correct-count').textContent = correctCount;
+    document.getElementById('medal-count').textContent   = medalCount;
+
+    // Bloqueia visualmente as questões já respondidas
+    answeredQuestions.forEach(qId => restoreAnswered(qId));
+
+    // Modo revisão: se a medalha foi conquistada, revela respostas corretas
+    const _earned = new Set((_saved.medals || []).map(m => m.name));
+    Object.entries(quizGroups).forEach(([gKey, ids]) => {
+      const def = medalDefs[gKey];
+      if (def && _earned.has(def.name))
+        ids.forEach(qId => { if (!answeredQuestions.has(qId)) revealCorrectAnswer(qId, gKey); });
+    });
+    if (medalDefs['match_4'] && _earned.has(medalDefs['match_4'].name)) revealDropdownMatch('dm4');
+  });
+
+  // ── Mapa completo de medalhas ──────────────────────────────────────────────
+  // quiz_N  → acertar TODAS as questões de múltipla escolha do módulo N
+  // tf_N    → responder TODAS as questões V/F do módulo N
+  // match_N → completar o jogo de ligar do módulo N
+  const medalDefs = {
+    quiz_1:  { emoji: '🌟', name: 'Gênio do Computador',   desc: 'Você acertou todas as perguntas do Quiz do Módulo 1!' },
+    tf_1:    { emoji: '✅', name: 'Detetive do Computador', desc: 'Você acertou todos os Verdadeiro ou Falso do Módulo 1!' },
+    match_1: { emoji: '🖥️', name: 'Mestre das Peças',      desc: 'Você ligou todas as partes do computador às suas funções!' },
+    quiz_2:  { emoji: '⚡', name: 'Craque do Teclado',     desc: 'Você acertou todas as perguntas do Quiz do Módulo 2!' },
+    tf_2:    { emoji: '🎹', name: 'Dedo de Ouro',           desc: 'Você acertou todos os Verdadeiro ou Falso do Módulo 2!' },
+    match_2: { emoji: '⌨️', name: 'Rei dos Atalhos',        desc: 'Você combinou todos os atalhos de teclado às suas funções!' },
+    quiz_3:  { emoji: '🔒', name: 'Guardião da Net',        desc: 'Você acertou todas as perguntas do Quiz do Módulo 3!' },
+    tf_3:    { emoji: '🛡️', name: 'Protetor Digital',       desc: 'Você acertou todos os Verdadeiro ou Falso do Módulo 3!' },
+    match_3: { emoji: '🌐', name: 'Navegador Seguro',       desc: 'Você combinou todos os navegadores às suas descrições!' },
+    quiz_4:  { emoji: '🖌️', name: 'Artista Digital',        desc: 'Você acertou todas as perguntas do Quiz do Módulo 4!' },
+    tf_4:    { emoji: '📂', name: 'Organizador Master',     desc: 'Você acertou todos os Verdadeiro ou Falso do Módulo 4!' },
+    match_4: { emoji: '🎨', name: 'Criador Digital',        desc: 'Você identificou o programa certo para cada tarefa!' },
+  };
+
+  // IDs de todas as questões por grupo (quiz e tf por módulo)
+  const quizGroups = {
+    quiz_1: ['q1_1','q1_2','q1_3','q1_4','q1_5'],
+    tf_1:   ['tf1_1','tf1_2','tf1_3','tf1_4','tf1_5'],
+    quiz_2: ['q2_1','q2_2','q2_3','q2_4','q2_5'],
+    tf_2:   ['tf2_1','tf2_2','tf2_3','tf2_4','tf2_5'],
+    quiz_3: ['q3_1','q3_2','q3_3','q3_4','q3_5'],
+    tf_3:   ['tf3_1','tf3_2','tf3_3','tf3_4','tf3_5'],
+    quiz_4: ['q4_1','q4_2','q4_3','q4_4','q4_5'],
+    tf_4:   ['tf4_1','tf4_2','tf4_3','tf4_4','tf4_5'],
+  };
+
+  // Rastreia acertos por grupo
+  const groupCorrect = {};
+  Object.keys(quizGroups).forEach(g => groupCorrect[g] = 0);
+
+  // ── Utilitários ────────────────────────────────────────────────────────────
+  function updateScore(pts) {
+    totalScore += pts;
+    if (pts > 0) correctCount++;
+    document.getElementById('total-score').textContent = totalScore;
+    document.getElementById('correct-count').textContent = correctCount;
+    saveProgress();
+  }
+
+  function saveProgress(qId, answerInfo) {
+    const data = JSON.parse(localStorage.getItem('digiturma') || '{}');
+    data.totalScore          = totalScore;
+    data.correctCount        = correctCount;
+    data.medalCount          = medalCount;
+    data.medals              = data.medals || [];
+    data.answeredQuestions   = [...answeredQuestions];
+    if (qId && answerInfo) {
+      data.answers = data.answers || {};
+      data.answers[qId] = answerInfo;
+    }
+    localStorage.setItem('digiturma', JSON.stringify(data));
+  }
+
+  // Restaura visual de questão já respondida mostrando a alternativa correta
+  function restoreAnswered(qId) {
+    const container = document.getElementById(qId);
+    if (!container) return;
+    container.querySelectorAll('button').forEach(b => b.disabled = true);
+
+    const saved = JSON.parse(localStorage.getItem('digiturma') || '{}');
+    const answers = saved.answers || {};
+    const info = answers[qId];
+
+    const fb = document.getElementById('fb_' + qId);
+
+    if (info && info.correct) {
+      // Acertou: marca botão correto em verde
+      if (info.type === 'quiz') {
+        const letters = ['A','B','C','D'];
+        const btns = container.querySelectorAll('.option-btn');
+        btns.forEach((b, i) => { if (letters[i] === info.correctKey) b.classList.add('correct'); });
+      } else if (info.type === 'tf') {
+        const tfBtns = container.querySelectorAll('.tf-btn');
+        tfBtns.forEach(b => { if (b.classList.contains('verdadeiro') === info.correctKey) b.classList.add('correct'); });
+      }
+      if (fb) {
+        fb.className = 'feedback correct-fb show';
+        fb.innerHTML = '✅ Você acertou esta questão!';
+      }
+    } else if (info && !info.correct) {
+      // Errou: mostra botão errado + destaca o correto
+      if (info.type === 'quiz') {
+        const letters = ['A','B','C','D'];
+        const btns = container.querySelectorAll('.option-btn');
+        btns.forEach((b, i) => {
+          if (letters[i] === info.chosenKey) b.classList.add('wrong');
+          if (letters[i] === info.correctKey) b.classList.add('correct');
+        });
+      } else if (info.type === 'tf') {
+        const tfBtns = container.querySelectorAll('.tf-btn');
+        tfBtns.forEach(b => {
+          const isVerd = b.classList.contains('verdadeiro');
+          if (isVerd === info.chosenKey) b.classList.add('wrong');
+          if (isVerd === info.correctKey) b.classList.add('correct');
+        });
+      }
+      if (fb) {
+        fb.className = 'feedback wrong-fb show';
+        fb.innerHTML = `❌ Você errou. A resposta correta está destacada em verde. ${getAulaLink(qId)}`;
+      }
+    } else {
+      // Sem detalhe salvo (fallback)
+      if (fb) {
+        fb.className = 'feedback show';
+        fb.style.cssText = 'background:#f0f0f0;border-color:#ccc;color:#666;display:flex;align-items:center;gap:0.5rem;';
+        fb.innerHTML = '🔒 Questão já respondida.';
+      }
+    }
+  }
+
+  function revealCorrectAnswer(qId, groupKey) {
+    const container = document.getElementById(qId);
+    if (!container) return;
+    container.querySelectorAll('button').forEach(b => b.disabled = true);
+    const fb = document.getElementById('fb_' + qId);
+    if (groupKey.startsWith('quiz_')) {
+      const btns = container.querySelectorAll('.option-btn');
+      const m = (btns[0]?.getAttribute('onclick') || '').match(/'([A-D])'\)/);
+      if (!m) return;
+      const letters = ['A','B','C','D'];
+      btns.forEach((b, i) => { if (letters[i] === m[1]) b.classList.add('correct'); });
+    } else if (groupKey.startsWith('tf_')) {
+      const btns = container.querySelectorAll('.tf-btn');
+      const m = (btns[0]?.getAttribute('onclick') || '').match(/,(true|false)\)/);
+      if (!m) return;
+      const correctAnswer = m[1] === 'true';
+      btns.forEach(b => { if (b.classList.contains('verdadeiro') === correctAnswer) b.classList.add('correct'); });
+    }
+    if (fb) { fb.className = 'feedback correct-fb show'; fb.innerHTML = '🔍 Revisão: resposta correta destacada em verde.'; }
+  }
+
+  function revealMatchPairs(resultId) {
+    const resultEl = document.getElementById(resultId);
+    if (!resultEl) return;
+    const container = resultEl.previousElementSibling;
+    if (!container || !container.classList.contains('match-container')) return;
+    container.querySelectorAll('[data-match="left"]').forEach(left => {
+      const right = container.querySelector(`[data-match="right"][data-id="${left.dataset.id}"]`);
+      if (right) {
+        left.classList.add('matched-correct'); right.classList.add('matched-correct');
+        left.style.pointerEvents = 'none'; right.style.pointerEvents = 'none';
+      }
+    });
+    resultEl.innerHTML = '🏆 Você já conquistou esta medalha! Confira os pares corretos acima.';
+    resultEl.style.color = '#28a745';
+  }
+
+  function awardMedal(key) {
+    const def = medalDefs[key];
+    if (!def) return;
+
+    const data = JSON.parse(localStorage.getItem('digiturma') || '{}');
+    data.medals = data.medals || [];
+
+    // Evita duplicata
+    if (data.medals.find(m => m.name === def.name)) return;
+
+    data.medals.push({ ...def, date: new Date().toLocaleDateString('pt-BR') });
+    data.medalCount = data.medals.length;
+    localStorage.setItem('digiturma', JSON.stringify(data));
+
+    medalCount++;
+    document.getElementById('medal-count').textContent = medalCount;
+
+    // Mostra modal
+    document.getElementById('modalEmoji').textContent     = def.emoji;
+    document.getElementById('modalMedalName').textContent = def.emoji + ' ' + def.name;
+    document.getElementById('modalDesc').textContent      = def.desc;
+    document.getElementById('medalOverlay').classList.add('show');
+  }
+
+  function closeMedalModal() {
+    document.getElementById('medalOverlay').classList.remove('show');
+  }
+
+  document.getElementById('medalOverlay').addEventListener('click', function(e) {
+    if (e.target === this) closeMedalModal();
+  });
+
+  // Verifica se todas as questões de um grupo foram respondidas e TODAS acertadas
+  function checkGroupComplete(questionId) {
+    for (const [groupKey, ids] of Object.entries(quizGroups)) {
+      if (!ids.includes(questionId)) continue;
+      const allAnswered = ids.every(id => answeredQuestions.has(id));
+      if (!allAnswered) return;
+      const allCorrect = groupCorrect[groupKey] === ids.length;
+      if (allCorrect) {
+        setTimeout(() => awardMedal(groupKey), 600);
+      }
+    }
+  }
+
+  // Descobre qual módulo (1-4) pertence uma questão e retorna o link da aula
+  function getAulaLink(questionId) {
+    const mod = questionId.match(/[qt]f?(\d)/)?.[1] || questionId.match(/q(\d)/)?.[1];
+    const links = { '1': 'aulas-modulo1.html', '2': 'aulas-modulo2.html', '3': 'aulas-modulo3.html', '4': 'aulas-modulo4.html' };
+    const labels = { '1': 'O Computador', '2': 'Teclado e Mouse', '3': 'Internet Segura', '4': 'Criando com PC' };
+    return mod
+      ? `<a href="${links[mod]}" style="color:#721c24;font-weight:800;text-decoration:underline;">📚 Estudar: ${labels[mod]}</a>`
+      : `<a href="aulas.html" style="color:#721c24;font-weight:800;text-decoration:underline;">📚 Voltar às Aulas</a>`;
+  }
+
+  // ── Quiz múltipla escolha ──────────────────────────────────────────────────
+  function checkQuiz(btn, questionId, correctLetter) {
+    const container = document.getElementById(questionId);
+    const buttons   = container.querySelectorAll('.option-btn');
+    const letters   = ['A','B','C','D'];
+    const clickedLetter = letters[Array.from(buttons).indexOf(btn)];
+    const feedback  = document.getElementById('fb_' + questionId);
+
+    if (answeredQuestions.has(questionId)) return;
+
+    buttons.forEach(b => b.disabled = true);
+
+    if (clickedLetter === correctLetter) {
+      answeredQuestions.add(questionId);
+      btn.classList.add('correct');
+      feedback.className = 'feedback correct-fb show';
+      feedback.innerHTML = '✅ Correto! Muito bem!';
+      updateScore(10);
+      saveProgress(questionId, { type:'quiz', correct:true, correctKey:correctLetter, chosenKey:clickedLetter });
+      for (const [g, ids] of Object.entries(quizGroups)) {
+        if (ids.includes(questionId)) { groupCorrect[g]++; break; }
+      }
+      checkGroupComplete(questionId);
+    } else {
+      feedback.className = 'feedback wrong-fb show';
+      feedback.innerHTML = `❌ Ops! Essa não era a certa. Tente de novo! ${getAulaLink(questionId)}`;
+      setTimeout(() => {
+        buttons.forEach(b => { b.disabled = false; b.classList.remove('wrong'); });
+        feedback.classList.remove('show');
+      }, 1800);
+    }
+  }
+
+  // ── Verdadeiro ou Falso ────────────────────────────────────────────────────
+  function checkTF(btn, questionId, correctAnswer) {
+    const container = document.getElementById(questionId);
+    const tfBtns    = container.querySelectorAll('.tf-btn');
+    const feedback  = document.getElementById('fb_' + questionId);
+    const isVerdadeiro = btn.classList.contains('verdadeiro');
+
+    if (answeredQuestions.has(questionId)) return;
+
+    tfBtns.forEach(b => b.disabled = true);
+
+    if (isVerdadeiro === correctAnswer) {
+      answeredQuestions.add(questionId);
+      btn.classList.add('correct');
+      feedback.className = 'feedback correct-fb show';
+      feedback.innerHTML = '✅ Correto! Você acertou!';
+      updateScore(8);
+      saveProgress(questionId, { type:'tf', correct:true, correctKey:correctAnswer, chosenKey:isVerdadeiro });
+      for (const [g, ids] of Object.entries(quizGroups)) {
+        if (ids.includes(questionId)) { groupCorrect[g]++; break; }
+      }
+      checkGroupComplete(questionId);
+    } else {
+      feedback.className = 'feedback wrong-fb show';
+      feedback.innerHTML = `❌ Ops! Essa não era a certa. Tente de novo! ${getAulaLink(questionId)}`;
+      setTimeout(() => {
+        tfBtns.forEach(b => { b.disabled = false; b.classList.remove('wrong'); });
+        feedback.classList.remove('show');
+      }, 1800);
+    }
+  }
+
+  // ── Dropdown Match ────────────────────────────────────────────────────────
+  function checkDropdownMatch(dmId, medalKey) {
+    const container = document.getElementById(dmId);
+    const selects = container.querySelectorAll('.dm-select');
+    let allFilled = true, allCorrect = true;
+    selects.forEach(sel => { if (!sel.value) allFilled = false; });
+    const res = document.getElementById(dmId + '-result');
+    if (!allFilled) {
+      res.innerHTML = '⚠️ Selecione uma resposta para cada item antes de verificar!';
+      res.style.color = '#d4a800';
+      return;
+    }
+    selects.forEach(sel => {
+      sel.classList.remove('correct', 'wrong');
+      if (sel.value === sel.dataset.correct) sel.classList.add('correct');
+      else { sel.classList.add('wrong'); allCorrect = false; }
+    });
+    if (allCorrect) {
+      selects.forEach(sel => sel.disabled = true);
+      res.innerHTML = '🏆 Parabéns! Você acertou tudo!';
+      res.style.color = '#28a745';
+      updateScore(5 * selects.length);
+      setTimeout(() => awardMedal(medalKey), 400);
+    } else {
+      res.innerHTML = '❌ Algumas respostas estão erradas. Corrija e tente novamente!';
+      res.style.color = '#dc3545';
+      setTimeout(() => {
+        selects.forEach(sel => { if (sel.classList.contains('wrong')) { sel.classList.remove('wrong'); sel.value = ''; } });
+        res.innerHTML = '';
+      }, 2000);
+    }
+  }
+
+  function revealDropdownMatch(dmId) {
+    const container = document.getElementById(dmId);
+    if (!container) return;
+    container.querySelectorAll('.dm-select').forEach(sel => {
+      sel.value = sel.dataset.correct;
+      sel.classList.add('correct');
+      sel.disabled = true;
+    });
+    const res = document.getElementById(dmId + '-result');
+    if (res) { res.innerHTML = '🏆 Você já conquistou esta medalha! Veja as respostas corretas acima.'; res.style.color = '#28a745'; }
+  }
+
+  // ── Navegação ──────────────────────────────────────────────────────────────
+  function showModule(id, btn) {
+    document.querySelectorAll('.module-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    btn.classList.add('active');
+    window.scrollTo({ top: 300, behavior: 'smooth' });
+  }
+
+  function retryQuiz() { location.reload(); }
+
+  const hash = window.location.hash.slice(1);
+  if      (hash === 'modulo2' || hash === 'a2') document.querySelectorAll('.tab-btn')[1].click();
+  else if (hash === 'modulo3' || hash === 'a3') document.querySelectorAll('.tab-btn')[2].click();
+  else if (hash === 'modulo4' || hash === 'a4') document.querySelectorAll('.tab-btn')[3].click();
+</script>
+</body>
+</html>

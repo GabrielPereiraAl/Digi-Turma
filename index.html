@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="digiturma.png">
+<title>DigiTurma - Aprenda Computação!</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style/global.css">
+<link rel="stylesheet" href="style/index.css">
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html">🖥️ Digi<span>Turma</span></a>
+  <button class="hamburger" onclick="toggleNav()" aria-label="Menu"><span></span><span></span><span></span></button>
+  <div class="nav-links">
+    <a href="index.html" class="active">🏠 Início</a>
+    <a href="aulas.html">📚 Aulas</a>
+    <a href="atividades.html">🎮 Atividades</a>
+    <a href="glossario.html">📖 Glossário</a>
+    <a href="conquistas.html">🏆 Conquistas</a>
+    <a href="sobre.html">ℹ️ Sobre</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-stars"></div>
+  <div class="floating-icons">
+    <span class="fi" style="left:5%;animation-duration:8s;animation-delay:0s;font-size:2rem">💻</span>
+    <span class="fi" style="left:15%;animation-duration:12s;animation-delay:2s">🖱️</span>
+    <span class="fi" style="left:30%;animation-duration:9s;animation-delay:4s;font-size:2rem">⌨️</span>
+    <span class="fi" style="left:50%;animation-duration:11s;animation-delay:1s">🔋</span>
+    <span class="fi" style="left:65%;animation-duration:10s;animation-delay:3s;font-size:2rem">📱</span>
+    <span class="fi" style="left:80%;animation-duration:7s;animation-delay:5s">🖨️</span>
+    <span class="fi" style="left:92%;animation-duration:13s;animation-delay:0.5s;font-size:2rem">🔌</span>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">🚀 Totalmente Gratuito</div>
+    <h1>Aprenda <span class="highlight">Computação</span><br>de um jeito divertido!</h1>
+    <p>Uma plataforma criada especialmente para crianças que querem dar os primeiros passos no mundo dos computadores. Aprenda brincando!</p>
+    <div class="hero-buttons">
+      <a href="aulas.html" class="btn-hero btn-primary">🎉 Começar Agora!</a>
+      <a href="sobre.html" class="btn-hero btn-secondary">Saiba Mais</a>
+    </div>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stat-item">
+    <span class="stat-icon">📚</span>
+    <div>
+      <div class="stat-number">5</div>
+      <div class="stat-label">Módulos</div>
+    </div>
+  </div>
+  <div class="stat-item">
+    <span class="stat-icon">🎮</span>
+    <div>
+      <div class="stat-number">20+</div>
+      <div class="stat-label">Atividades</div>
+    </div>
+  </div>
+  <div class="stat-item">
+    <span class="stat-icon">🏆</span>
+    <div>
+      <div class="stat-number">10+</div>
+      <div class="stat-label">Conquistas</div>
+    </div>
+  </div>
+  <div class="stat-item">
+    <span class="stat-icon">👧</span>
+    <div>
+      <div class="stat-number">100%</div>
+      <div class="stat-label">Gratuito</div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="section-title">🗺️ Trilhas de Aprendizado</div>
+  <p class="section-sub">Escolha por onde começar sua aventura no mundo digital!</p>
+  <div class="modules-grid">
+    <a href="aulas-modulo1.html" class="module-card">
+      <span class="module-icon">🖥️</span>
+      <h3>O Computador</h3>
+      <p>Conheça as partes do computador: monitor, teclado, mouse e muito mais!</p>
+      <span class="module-tag">Iniciante</span>
+      <div class="module-lessons">📖 5 lições</div>
+      <div class="progress-bar"><div class="progress-fill" data-w="0"></div></div>
+    </a>
+    <a href="aulas-modulo2.html" class="module-card">
+      <span class="module-icon">⌨️</span>
+      <h3>Teclado e Mouse</h3>
+      <p>Aprenda a usar o teclado e o mouse como um verdadeiro especialista!</p>
+      <span class="module-tag">Iniciante</span>
+      <div class="module-lessons">📖 5 lições</div>
+      <div class="progress-bar"><div class="progress-fill" data-w="0"></div></div>
+    </a>
+    <a href="aulas-modulo3.html" class="module-card">
+      <span class="module-icon">🌐</span>
+      <h3>Internet Segura</h3>
+      <p>Descubra o que é a internet e como usá-la com segurança e responsabilidade.</p>
+      <span class="module-tag">Intermediário</span>
+      <div class="module-lessons">📖 5 lições</div>
+      <div class="progress-bar"><div class="progress-fill" data-w="0"></div></div>
+    </a>
+    <a href="aulas-modulo4.html" class="module-card">
+      <span class="module-icon">🎨</span>
+      <h3>Criando com o PC</h3>
+      <p>Use programas para desenhar, escrever histórias e criar apresentações!</p>
+      <span class="module-tag">Intermediário</span>
+      <div class="module-lessons">📖 5 lições</div>
+      <div class="progress-bar"><div class="progress-fill" data-w="0"></div></div>
+    </a>
+    <a href="aulas-modulo5.html" class="module-card">
+      <span class="module-icon">🤖</span>
+      <h3>Inteligência Artificial</h3>
+      <p>Descubra o que é IA, como ela aprende e como já faz parte do seu dia a dia!</p>
+      <span class="module-tag">Avançado</span>
+      <div class="module-lessons">📖 5 lições</div>
+      <div class="progress-bar"><div class="progress-fill" data-w="0"></div></div>
+    </a>
+  </div>
+</section>
+
+<section>
+  <div class="how-section">
+    <div class="section-title">🎯 Como Funciona?</div>
+    <p class="section-sub">Simples, divertido e eficiente!</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h4>Escolha uma Trilha</h4>
+        <p>Selecione o módulo que mais te interessa e comece a jornada!</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h4>Assista e Leia</h4>
+        <p>Conteúdos coloridos e animados explicam tudo de forma simples.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>Pratique</h4>
+        <p>Jogos e atividades interativas para fixar o que aprendeu!</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h4>Ganhe Medalhas</h4>
+        <p>Complete desafios e colecionas suas conquistas especiais!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-title">✨ Por que o DigiTurma?</div>
+  <p class="section-sub">Feito com carinho para o aprendizado das crianças</p>
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">🎮</div>
+      <div>
+        <h4>Aprender Brincando</h4>
+        <p>Jogos e quizzes tornam o aprendizado divertido e eficiente.</p>
+      </div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🔒</div>
+      <div>
+        <h4>100% Seguro</h4>
+        <p>Ambiente seguro e protegido, sem anúncios ou conteúdo inadequado.</p>
+      </div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📱</div>
+      <div>
+        <h4>Funciona em Tudo</h4>
+        <p>Celular, tablet ou computador — aprenda de qualquer lugar!</p>
+      </div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🏆</div>
+      <div>
+        <h4>Sistema de Recompensas</h4>
+        <p>Medalhas e conquistas motivam a criança a continuar aprendendo.</p>
+      </div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">👨‍🏫</div>
+      <div>
+        <h4>Linguagem Simples</h4>
+        <p>Tudo explicado de um jeito que as crianças entendem e adoram!</p>
+      </div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">💰</div>
+      <div>
+        <h4>Totalmente Gratuito</h4>
+        <p>Sem nenhum custo para a comunidade.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="guide-section">
+    <div class="section-title">🏅 Como Funciona o Progresso?</div>
+    <p class="section-sub">Entenda como ganhar pontos e conquistar suas medalhas!</p>
+    <div class="guide-grid">
+      <div class="guide-card">
+        <span class="gc-icon">📚</span>
+        <h4>1. Estude as Aulas</h4>
+        <p>Leia os conteúdos de cada módulo para aprender o tema antes de fazer as atividades.</p>
+      </div>
+      <div class="guide-card">
+        <span class="gc-icon">🎯</span>
+        <h4>2. Faça o Quiz</h4>
+        <p>Responda as 5 perguntas de múltipla escolha. Acerte todas para ganhar uma medalha especial!</p>
+      </div>
+      <div class="guide-card">
+        <span class="gc-icon">✅</span>
+        <h4>3. Verdadeiro ou Falso</h4>
+        <p>Diga se cada afirmação é verdadeira ou falsa. Acerte todas e ganhe mais uma medalha!</p>
+      </div>
+      <div class="guide-card">
+        <span class="gc-icon">🔗</span>
+        <h4>4. Jogo de Ligar</h4>
+        <p>Ligue cada conceito ao seu par correto. Complete sem errar e conquiste a medalha do módulo!</p>
+      </div>
+    </div>
+    <p style="text-align:center; margin-top:2rem; font-weight:700; font-size:1rem;">🏆 Cada módulo tem <strong>3 medalhas</strong> para conquistar — são <strong>15 medalhas no total!</strong></p>
+    <div class="medal-types">
+      <span class="medal-pill">🌟 Quiz perfeito</span>
+      <span class="medal-pill">✅ V/F perfeito</span>
+      <span class="medal-pill">🔗 Ligar completo</span>
+      <span class="medal-pill">⭐ Pontos acumulados</span>
+    </div>
+    <p style="text-align:center; margin-top:1.5rem;">
+      <a href="conquistas.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--escuro);color:var(--amarelo);text-decoration:none;padding:0.7rem 1.8rem;border-radius:30px;font-family:'Baloo 2',cursive;font-weight:800;font-size:1rem;box-shadow:0 4px 0 rgba(0,0,0,0.2);">🏆 Ver Minhas Conquistas</a>
+    </p>
+  </div>
+</section>
+
+<div class="cta-section">
+  <h2>Pronto para começar a aventura? 🚀</h2>
+  <p>Junte-se a centenas de crianças que já estão aprendendo computação de um jeito super divertido!</p>
+  <a href="aulas.html" class="btn-hero btn-primary" style="font-size:1.2rem; padding:1rem 2.5rem;">🎉 Começar Agora — É Grátis!</a>
+</div>
+
+<footer>
+  <p>🖥️ <strong>DigiTurma</strong></p>
+  <p style="margin-top:0.5rem;">Desenvolvido com ❤️ para a comunidade • 2026</p>
+</footer>
+
+<script src="script/global.js"></script>
+<script>
+  // Primeiro acesso: redireciona para cadastro se ainda não preencheu
+  if (localStorage.getItem('digiturma_cadastro') !== 'ok') {
+    window.location.replace('primeira-visita.html');
+  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.querySelectorAll('.progress-fill').forEach(bar => {
+          bar.style.width = bar.dataset.w + '%';
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('.modules-grid').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

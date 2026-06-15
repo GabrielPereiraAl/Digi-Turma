@@ -1,0 +1,562 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="digiturma.png">
+<title>Glossário - DigiTurma</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style/global.css">
+<link rel="stylesheet" href="style/glossario.css">
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html">🖥️ Digi<span>Turma</span></a>
+  <button class="hamburger" onclick="toggleNav()" aria-label="Menu"><span></span><span></span><span></span></button>
+  <div class="nav-links">
+    <a href="index.html">🏠 Início</a>
+    <a href="aulas.html">📚 Aulas</a>
+    <a href="atividades.html">🎮 Atividades</a>
+    <a href="glossario.html" class="active">📖 Glossário</a>
+    <a href="conquistas.html">🏆 Conquistas</a>
+    <a href="sobre.html">ℹ️ Sobre</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1>📖 Glossário</h1>
+  <p>Dicionário de tecnologia para crianças — palavras difíceis explicadas de um jeito fácil!</p>
+</div>
+
+<div class="search-bar">
+  <input class="search-input" type="text" id="search" placeholder="🔍 Buscar palavra... (ex: mouse, internet, RAM)" oninput="filterTerms()" autocomplete="off">
+</div>
+
+<div class="alpha-nav" id="alpha-nav"></div>
+
+<div class="glossary-container" id="glossary">
+
+  <div class="letter-section" data-letter="A">
+    <div class="letter-heading">A</div>
+    <div class="term-card" data-term="aplicativo">
+      <div class="term-icon">📱</div>
+      <div class="term-body">
+        <div class="term-name">Aplicativo (App)</div>
+        <div class="term-def">Um programa feito para fazer uma coisa específica no computador ou celular. Exemplos: jogos, calculadora, WhatsApp e navegadores são aplicativos!</div>
+        <span class="term-tag">Módulo 4</span>
+      </div>
+    </div>
+    <div class="term-card" data-term="armazenamento">
+      <div class="term-icon">💾</div>
+      <div class="term-body">
+        <div class="term-name">Armazenamento</div>
+        <div class="term-def">É o espaço onde o computador guarda arquivos, fotos, músicas e programas. É como o "baú do tesouro" do computador!</div>
+        <span class="term-tag">Módulo 1</span>
+      </div>
+    </div>
+    <div class="term-card" data-term="arquivo">
+      <div class="term-icon">📄</div>
+      <div class="term-body">
+        <div class="term-name">Arquivo</div>
+        <div class="term-def">Qualquer coisa que o computador guarda: um texto, uma foto, uma música, um vídeo. Cada arquivo tem um nome e fica guardado numa pasta.</div>
+        <span class="term-tag">Módulo 4</span>
+      </div>
+    </div>
+    <div class="term-card" data-term="atalho">
+      <div class="term-icon">⚡</div>
+      <div class="term-body">
+        <div class="term-name">Atalho de Teclado</div>
+        <div class="term-def">Combinação de teclas que faz algo rápido, sem precisar usar o mouse. Exemplo: Ctrl+C copia um texto. É como um superpoder do teclado!</div>
+        <span class="term-tag">Módulo 2</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="letter-section" data-letter="B">
+    <div class="letter-heading">B</div>
+    <div class="term-card" data-term="backspace">
+      <div class="term-icon">⌫</div>
+      <div class="term-body">
+        <div class="term-name">Backspace</div>
+        <div class="term-def">Tecla do teclado que apaga a letra que está antes do cursor. É a "borrachinha" do teclado! Fica no canto superior direito das letras.</div>
+        <span class="term-tag">Módulo 2</span>
+      </div>
+    </div>
+    <div class="term-card" data-term="browser">
+      <div class="term-icon">🌍</div>
+      <div class="term-body">
+        <div class="term-name">Browser (Navegador)</div>
+        <div class="term-def">Programa que usamos para acessar sites na internet. Chrome, Firefox, Edge e Safari são exemplos de browsers. É a "janela" para a internet!</div>
+        <span class="term-tag">Módulo 3</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="letter-section" data-letter="C">
+    <div class="letter-heading">C</div>
+    <div class="term-card" data-term="caps lock">
+      <div class="term-icon">🔒</div>
+      <div class="term-body">
+        <div class="term-name">Caps Lock</div>
+        <div class="term-def">Tecla que trava o teclado para escrever somente em LETRAS MAIÚSCULAS. Quando está ativada, uma luzsinha acende no teclado!</div>
+        <span class="term-tag">Módulo 2</span>
+      </div>
+    </div>
+    <div class="term-card" data-term="clicar">
+      <div class="term-icon">👆</div>
+      <div class="term-body">
+        <div class="term-name">Clicar</div>
+        <div class="term-def">Pressionar e soltar rapidamente o botão do mouse. Um clique seleciona; dois cliques (duplo clique) abre arquivos e programas.</div>
+        <span class="term-tag">Módulo 2</span>
+      </div>
+    </div>
+    <div class="term-card" data-term="computador">
+      <div class="term-icon">🖥️</div>
+      <div class="term-body">
+        <div class="term-name">Computador</div>
+        <div class="term-def">Máquina eletrônica que processa informações, executa programas, guarda arquivos e conecta pessoas. Desktop, notebook, tablet e celular são tipos de computadores!</div>
+        <span class="term-tag">Módulo 1</span>
+      </div>
+    </div>
+    <div class="term-card" data-term="chatbot robô conversa ia">
+      <div class="term-icon">💬</div>
+      <div class="term-body">
+        <div class="term-name">Chatbot</div>
+        <div class="term-def">Programa que conversa com pessoas por texto, usando Inteligência Artificial. Assistentes como Siri, Alexa e ChatGPT são chatbots — eles entendem suas perguntas e respondem automaticamente.</div>
+        <span class="term-tag">Módulo 5</span>
+      </div>
+    </div>
+    <div class="term-card" data-term="cpu processador">
+      <div class="term-icon">🔲</div>
+      <div class="term-body">
+        <div class="term-name">CPU / Processador</div>
+        <div class="term-def">O "cérebro" do computador! É um chip pequeno que faz todos os cálculos e processamentos. Quanto mais potente, mais rápido o computador funciona.</div>
+        <span class="term-tag">Módulo 1</span>
+      </div>
+    </div>
+    <div class="term-card" data-term="cursor">
+      <div class="term-icon">🖱️</div>
+      <div class="term-body">
+        <div class="term-name">Cursor</div>
+        <div class="term-def">A setinha (ou traço piscando) que aparece na tela e mostra onde você está. Você move o cursor com o mouse ou com as teclas de direção.</div>
+        <span class="term-tag">Módulo 2</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="letter-section" data-letter="D">
+    <div class="letter-heading">D</div>
+    <div class="term-card" data-term="dados data ia machine learning">
+      <div class="term-icon">📊</div>
+      <div class="term-body">
+        <div class="term-name">Dados</div>
+        <div class="term-def">Informações que o computador processa — podem ser textos, números, fotos, sons ou vídeos. A Inteligência Artificial aprende analisando grandes quantidades de dados.</div>
+        <span class="term-tag">Módulo 5</span>
+      </div>
+    </div>
+    <div class="term-card" data-term="desktop área de trabalho">
+      <div class="term-icon">🖥️</div>
+      <div class="term-body">
+        <div class="term-name">Desktop / Área de Trabalho</div>
+        <div class="term-def">Pode ser o tipo de computador que fica na mesa — ou a tela principal que aparece quando você liga o computador, onde ficam os ícones dos programas.</div>
+        <span class="term-tag">Módulo 4</span>
+      </div>
+    </div>
+    <div class="term-card" data-term="disco rígido hd ssd">
+      <div class="term-icon">💾</div>
+      <div class="term-body">
+        <div class="term-name">Disco Rígido (HD/SSD)</div>
+        <div class="term-def">Peça do computador que guarda todos os arquivos permanentemente — mesmo quando desliga. É como o "quarto" onde o computador guarda tudo que tem.</div>
+        <span class="term-tag">Módulo 1</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="letter-section" data-letter="E">
+    <div class="letter-heading">E</div>
+    <div class="term-card" data-term="email e-mail">
+      <div class="term-icon">✉️</div>
+      <div class="term-body">
+        <div class="term-name">E-mail</div>
+        <div class="term-def">Mensagem eletrônica enviada pela internet — como uma carta digital! Você precisa de um endereço de e-mail (exemplo: nome@exemplo.com) para enviar e receber.</div>
+        <span class="term-tag">Módulo 3</span>
+      </div>
+    </div>
+    <div class="term-card" data-term="enter">
+      <div class="term-icon">↵</div>
+      <div class="term-body">
+        <div class="term-name">Enter</div>
+        <div class="term-def">Tecla que confirma ações (como enviar uma busca) ou pula para a próxima linha ao digitar um texto. É uma das teclas mais usadas do teclado!</div>
+        <span class="term-tag">Módulo 2</span>
+      </div>
+    </div>
+    <div class="term-card" data-term="esc escape">
+      <div class="term-icon">⎋</div>
+      <div class="term-body">
+        <div class="term-name">Esc (Escape)</div>
+        <div class="term-def">Tecla que cancela uma ação ou fecha janelas. Fica no canto superior esquerdo do teclado. É como um botão de "voltar" ou "cancelar".</div>
+        <span class="term-tag">Módulo 2</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="letter-section" data-letter="G">
+    <div class="letter-heading">G</div>
+    <div class="term-card" data-term="google buscador">
+      <div class="term-icon">🔍</div>
+      <div class="term-body">
+        <div class="term-name">Google (Buscador)</div>
+        <div class="term-def">O buscador mais famoso do mundo! Você digita o que quer encontrar e o Google busca informações em milhões de sites. É como uma biblioteca gigante e instantânea!</div>
+        <span class="term-tag">Módulo 3</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="letter-section" data-letter="H">
+    <div class="letter-heading">H</div>
+    <div class="term-card" data-term="hardware">
+      <div class="term-icon">🔩</div>
+      <div class="term-body">
+        <div class="term-name">Hardware</div>
+        <div class="term-def">Todas as partes físicas do computador que você pode tocar: monitor, teclado, mouse, CPU, impressora. Se você consegue segurar, é hardware!</div>
+        <span class="term-tag">Módulo 1</span>
+      </div>
+    </div>
+    <div class="term-card" data-term="hd disco rigido">
+      <div class="term-icon">💿</div>
+      <div class="term-body">
+        <div class="term-name">HD (Hard Disk)</div>
+        <div class="term-def">Sigla em inglês para "Disco Rígido". É onde o computador guarda seus arquivos de forma permanente. Medido em gigabytes (GB) ou terabytes (TB).</div>
+        <span class="term-tag">Módulo 1</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="letter-section" data-letter="I">
+    <div class="letter-heading">I</div>
+    <div class="term-card" data-term="ia inteligencia artificial">
+      <div class="term-icon">🤖</div>
+      <div class="term-body">
+        <div class="term-name">IA (Inteligência Artificial)</div>
+        <div class="term-def">Sistema que permite ao computador aprender com exemplos e tomar decisões, quase como um cérebro artificial. Ela está em assistentes de voz, recomendações de música e muito mais!</div>
+        <span class="term-tag">Módulo 5</span>
+      </div>
+    </div>
+    <div class="term-card" data-term="ia generativa criativa">
+      <div class="term-icon">🎨</div>
+      <div class="term-body">
+        <div class="term-name">IA Generativa</div>
+        <div class="term-def">Tipo de Inteligência Artificial capaz de criar coisas novas: textos, imagens, músicas e conversas. ChatGPT e geradores de imagem são exemplos de IA Generativa.</div>
+        <span class="term-tag">Módulo 5</span>
+      </div>
+    </div>
+    <div class="term-card" data-term="icone">
+      <div class="term-icon">🔵</div>
+      <div class="term-body">
+        <div class="term-name">Ícone</div>
+        <div class="term-def">Uma imagem pequena na tela que representa um programa, arquivo ou pasta. Você dá duplo clique no ícone para abrir o que ele representa.</div>
+        <span class="term-tag">Módulo 4</span>
+      </div>
+    </div>
+    <div class="term-card" data-term="impressora">
+      <div class="term-icon">🖨️</div>
+      <div class="term-body">
+        <div class="term-name">Impressora</div>
+        <div class="term-def">Periférico que transfere para papel o que está na tela do computador. Você imprime textos, fotos e documentos através dela.</div>
+        <span class="term-tag">Módulo 1</span>
+      </div>
+    </div>
+    <div class="term-card" data-term="internet rede">
+      <div class="term-icon">🌐</div>
+      <div class="term-body">
+        <div class="term-name">Internet</div>
+        <div class="term-def">Rede gigante que conecta computadores do mundo inteiro! Através dela podemos assistir vídeos, conversar, estudar e pesquisar. É como uma teia de aranha que cobre o planeta!</div>
+        <span class="term-tag">Módulo 3</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="letter-section" data-letter="M">
+    <div class="letter-heading">M</div>
+    <div class="term-card" data-term="machine learning aprendizado maquina ia">
+      <div class="term-icon">🧠</div>
+      <div class="term-body">
+        <div class="term-name">Machine Learning (Aprendizado de Máquina)</div>
+        <div class="term-def">Técnica onde a Inteligência Artificial aprende sozinha analisando exemplos, sem precisar que alguém programe cada regra. Quanto mais exemplos ela vê, mais esperta fica!</div>
+        <span class="term-tag">Módulo 5</span>
+      </div>
+    </div>
+    <div class="term-card" data-term="memoria ram">
+      <div class="term-icon">⚡</div>
+      <div class="term-body">
+        <div class="term-name">Memória RAM</div>
+        <div class="term-def">Memória temporária do computador. Guarda o que está sendo usado agora, mas apaga tudo quando desliga. É como a mochila escolar: só fica o que você usa hoje!</div>
+        <span class="term-tag">Módulo 1</span>
+      </div>
+    </div>
+    <div class="term-card" data-term="monitor tela">
+      <div class="term-icon">🖥️</div>
+      <div class="term-body">
+        <div class="term-name">Monitor</div>
+        <div class="term-def">A tela do computador onde você vê tudo — textos, imagens, vídeos e programas. Funciona como a "janela" para o mundo digital.</div>
+        <span class="term-tag">Módulo 1</span>
+      </div>
+    </div>
+    <div class="term-card" data-term="mouse">
+      <div class="term-icon">🖱️</div>
+      <div class="term-body">
+        <div class="term-name">Mouse</div>
+        <div class="term-def">Dispositivo que você segura na mão e move para controlar o cursor na tela. Tem botão esquerdo (clicar), botão direito (menu de opções) e rolinha no meio.</div>
+        <span class="term-tag">Módulo 2</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="letter-section" data-letter="N">
+    <div class="letter-heading">N</div>
+    <div class="term-card" data-term="navegador browser">
+      <div class="term-icon">🧭</div>
+      <div class="term-body">
+        <div class="term-name">Navegador (Browser)</div>
+        <div class="term-def">Programa para acessar sites na internet. Você digita o endereço (URL) do site na barra e aperta Enter. Chrome, Firefox, Edge e Safari são navegadores famosos.</div>
+        <span class="term-tag">Módulo 3</span>
+      </div>
+    </div>
+    <div class="term-card" data-term="notebook laptop">
+      <div class="term-icon">💻</div>
+      <div class="term-body">
+        <div class="term-name">Notebook (Laptop)</div>
+        <div class="term-def">Computador portátil que você carrega — tem tela, teclado e bateria integrados. É prático para usar em qualquer lugar, mas geralmente menos potente que um desktop.</div>
+        <span class="term-tag">Módulo 1</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="letter-section" data-letter="P">
+    <div class="letter-heading">P</div>
+    <div class="term-card" data-term="paint desenho">
+      <div class="term-icon">🎨</div>
+      <div class="term-body">
+        <div class="term-name">Paint</div>
+        <div class="term-def">Programa de desenho que vem no Windows. Com ele você pode pintar, colorir e criar imagens digitais usando ferramentas como lápis, pincel e balde de tinta.</div>
+        <span class="term-tag">Módulo 4</span>
+      </div>
+    </div>
+    <div class="term-card" data-term="pasta diretorio">
+      <div class="term-icon">📁</div>
+      <div class="term-body">
+        <div class="term-name">Pasta (Diretório)</div>
+        <div class="term-def">Espaço virtual para organizar arquivos — como uma gaveta ou caixinha. Você pode criar pastas com qualquer nome para manter seus arquivos organizados.</div>
+        <span class="term-tag">Módulo 4</span>
+      </div>
+    </div>
+    <div class="term-card" data-term="periférico">
+      <div class="term-icon">🔌</div>
+      <div class="term-body">
+        <div class="term-name">Periférico</div>
+        <div class="term-def">Dispositivo que se conecta ao computador para adicionar funcionalidades. Exemplos: impressora, scanner, webcam, fone de ouvido e pen drive são periféricos.</div>
+        <span class="term-tag">Módulo 1</span>
+      </div>
+    </div>
+    <div class="term-card" data-term="powerpoint slides apresentacao">
+      <div class="term-icon">📊</div>
+      <div class="term-body">
+        <div class="term-name">PowerPoint</div>
+        <div class="term-def">Programa para criar apresentações com slides. Você pode adicionar texto, imagens e cores para contar histórias ou apresentar projetos de escola de um jeito visual!</div>
+        <span class="term-tag">Módulo 4</span>
+      </div>
+    </div>
+    <div class="term-card" data-term="programa software">
+      <div class="term-icon">⚙️</div>
+      <div class="term-body">
+        <div class="term-name">Programa</div>
+        <div class="term-def">Conjunto de instruções que diz ao computador o que fazer. Word, Paint, jogos e navegadores são todos programas. Também chamados de "aplicativos" ou "software".</div>
+        <span class="term-tag">Módulo 4</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="letter-section" data-letter="R">
+    <div class="letter-heading">R</div>
+    <div class="term-card" data-term="ram memoria">
+      <div class="term-icon">🧠</div>
+      <div class="term-body">
+        <div class="term-name">RAM</div>
+        <div class="term-def">Sigla de "Random Access Memory" (Memória de Acesso Aleatório). É a memória temporária do computador — guarda o que está em uso agora e apaga quando desliga.</div>
+        <span class="term-tag">Módulo 1</span>
+      </div>
+    </div>
+    <div class="term-card" data-term="rede internet">
+      <div class="term-icon">🕸️</div>
+      <div class="term-body">
+        <div class="term-name">Rede</div>
+        <div class="term-def">Conjunto de computadores conectados entre si para trocar informações. A internet é a maior rede do mundo! Uma rede em casa é chamada de Wi-Fi ou rede local.</div>
+        <span class="term-tag">Módulo 3</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="letter-section" data-letter="S">
+    <div class="letter-heading">S</div>
+    <div class="term-card" data-term="senha password segurança">
+      <div class="term-icon">🔑</div>
+      <div class="term-body">
+        <div class="term-name">Senha (Password)</div>
+        <div class="term-def">Palavra secreta que protege suas contas e arquivos. Nunca compartilhe sua senha com ninguém — exceto com seus pais! Boas senhas misturam letras, números e símbolos.</div>
+        <span class="term-tag">Módulo 3</span>
+      </div>
+    </div>
+    <div class="term-card" data-term="shift maiuscula">
+      <div class="term-icon">⇧</div>
+      <div class="term-body">
+        <div class="term-name">Shift</div>
+        <div class="term-def">Tecla que, quando mantida pressionada, faz as letras ficarem maiúsculas e permite digitar os símbolos que ficam na parte superior das teclas de número.</div>
+        <span class="term-tag">Módulo 2</span>
+      </div>
+    </div>
+    <div class="term-card" data-term="site web página">
+      <div class="term-icon">🌐</div>
+      <div class="term-body">
+        <div class="term-name">Site (Página Web)</div>
+        <div class="term-def">Página na internet que você pode visitar pelo navegador. Cada site tem um endereço chamado URL (como www.google.com.br). Existem bilhões de sites no mundo!</div>
+        <span class="term-tag">Módulo 3</span>
+      </div>
+    </div>
+    <div class="term-card" data-term="software programa">
+      <div class="term-icon">💿</div>
+      <div class="term-body">
+        <div class="term-name">Software</div>
+        <div class="term-def">Conjunto de programas e aplicativos do computador — tudo que você não pode tocar fisicamente. É o oposto de hardware. Jogos, Word e o próprio Windows são softwares!</div>
+        <span class="term-tag">Módulo 1</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="letter-section" data-letter="T">
+    <div class="letter-heading">T</div>
+    <div class="term-card" data-term="tablet">
+      <div class="term-icon">📱</div>
+      <div class="term-body">
+        <div class="term-name">Tablet</div>
+        <div class="term-def">Computador portátil com tela sensível ao toque (touch screen). Você controla com os dedos diretamente na tela, sem precisar de mouse separado.</div>
+        <span class="term-tag">Módulo 1</span>
+      </div>
+    </div>
+    <div class="term-card" data-term="teclado keyboard">
+      <div class="term-icon">⌨️</div>
+      <div class="term-body">
+        <div class="term-name">Teclado</div>
+        <div class="term-def">Dispositivo cheio de teclas que usamos para digitar letras, números e símbolos no computador. Tem teclas especiais como Enter, Shift, Ctrl, Esc e muitas outras!</div>
+        <span class="term-tag">Módulo 2</span>
+      </div>
+    </div>
+    <div class="term-card" data-term="touch screen tela toque">
+      <div class="term-icon">👆</div>
+      <div class="term-body">
+        <div class="term-name">Touch Screen (Tela de Toque)</div>
+        <div class="term-def">Tela que responde ao toque dos dedos. Celulares e tablets têm touch screen — você não precisa de mouse, basta tocar na tela com o dedo!</div>
+        <span class="term-tag">Módulo 1</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="letter-section" data-letter="U">
+    <div class="letter-heading">U</div>
+    <div class="term-card" data-term="url endereço site">
+      <div class="term-icon">🔗</div>
+      <div class="term-body">
+        <div class="term-name">URL (Endereço do Site)</div>
+        <div class="term-def">O endereço de um site na internet, como "www.google.com.br". Você digita a URL na barra de endereços do navegador para visitar um site específico.</div>
+        <span class="term-tag">Módulo 3</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="letter-section" data-letter="V">
+    <div class="letter-heading">V</div>
+    <div class="term-card" data-term="virus malware segurança">
+      <div class="term-icon">🦠</div>
+      <div class="term-body">
+        <div class="term-name">Vírus (de Computador)</div>
+        <div class="term-def">Programa malicioso que tenta danificar o computador ou roubar informações. Por isso nunca clique em links suspeitos! Um antivírus ajuda a proteger o computador.</div>
+        <span class="term-tag">Módulo 3</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="letter-section" data-letter="W">
+    <div class="letter-heading">W</div>
+    <div class="term-card" data-term="wifi internet sem fio wireless">
+      <div class="term-icon">📶</div>
+      <div class="term-body">
+        <div class="term-name">Wi-Fi</div>
+        <div class="term-def">Tecnologia que conecta o computador ou celular à internet sem fio (sem cabo). O roteador Wi-Fi em casa distribui sinal para todos os dispositivos conectarem!</div>
+        <span class="term-tag">Módulo 3</span>
+      </div>
+    </div>
+    <div class="term-card" data-term="windows sistema operacional">
+      <div class="term-icon">🪟</div>
+      <div class="term-body">
+        <div class="term-name">Windows</div>
+        <div class="term-def">Sistema operacional mais usado em computadores do mundo, criado pela Microsoft. É o "gerente" do computador — controla todos os programas e recursos da máquina.</div>
+        <span class="term-tag">Módulo 1</span>
+      </div>
+    </div>
+    <div class="term-card" data-term="word texto documento">
+      <div class="term-icon">📝</div>
+      <div class="term-body">
+        <div class="term-name">Word</div>
+        <div class="term-def">Programa da Microsoft para escrever textos, histórias e documentos. Você pode formatar o texto, adicionar imagens e salvar seu trabalho como arquivo .docx.</div>
+        <span class="term-tag">Módulo 4</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="no-results" id="no-results">
+    🤔 Nenhuma palavra encontrada. Tente outra busca!
+  </div>
+</div>
+
+<footer>
+  <p>🖥️ <strong>DigiTurma</strong> • 2026</p>
+</footer>
+
+<script src="script/global.js"></script>
+<script>
+  // Build alphabet nav
+  const letters = ['A','B','C','D','E','G','H','I','M','N','P','R','S','T','U','V','W'];
+  const alphaNav = document.getElementById('alpha-nav');
+  'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').forEach(l => {
+    const btn = document.createElement('button');
+    btn.className = 'alpha-btn' + (letters.includes(l) ? ' has-terms' : '');
+    btn.textContent = l;
+    btn.onclick = () => {
+      const sec = document.querySelector(`[data-letter="${l}"]`);
+      if (sec) sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+    btn.disabled = !letters.includes(l);
+    alphaNav.appendChild(btn);
+  });
+
+  function filterTerms() {
+    const query = document.getElementById('search').value.toLowerCase().trim();
+    const sections = document.querySelectorAll('.letter-section');
+    let hasAny = false;
+
+    sections.forEach(sec => {
+      let sectionVisible = false;
+      sec.querySelectorAll('.term-card').forEach(card => {
+        const termText = card.dataset.term + ' ' + card.textContent.toLowerCase();
+        const match = !query || termText.includes(query);
+        card.style.display = match ? 'flex' : 'none';
+        if (match) { sectionVisible = true; hasAny = true; }
+      });
+      sec.style.display = sectionVisible ? 'block' : 'none';
+    });
+
+    document.getElementById('no-results').classList.toggle('show', !hasAny);
+  }
+</script>
+</body>
+</html>

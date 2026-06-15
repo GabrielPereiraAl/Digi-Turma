@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="digiturma.png">
+<title>Aulas — Módulo 3: Internet Segura - DigiTurma</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style/global.css">
+<link rel="stylesheet" href="style/aulas-modulo.css">
+</head>
+<body>
+<nav>
+  <a class="logo" href="index.html">🖥️ Digi<span>Turma</span></a>
+  <button class="hamburger" onclick="toggleNav()" aria-label="Menu"><span></span><span></span><span></span></button>
+  <div class="nav-links">
+    <a href="index.html">🏠 Início</a>
+    <a href="aulas.html">📚 Aulas</a>
+    <a href="atividades.html">🎮 Atividades</a>
+    <a href="glossario.html">📖 Glossário</a>
+    <a href="conquistas.html">🏆 Conquistas</a>
+    <a href="sobre.html">ℹ️ Sobre</a>
+  </div>
+</nav>
+
+<div class="page-header" style="background:linear-gradient(135deg, var(--azul), var(--roxo));">
+  <h1>🌐 Módulo 3 — Internet Segura</h1>
+  <p>Leia com atenção e depois faça as atividades!</p>
+</div>
+
+<div class="lesson-container">
+<div class="module-panel active" id="m3">
+    <div class="module-intro">
+      <div class="module-intro-icon">🌐</div>
+      <div>
+        <h2>Módulo 3 — Internet Segura</h2>
+        <p>A internet é um lugar incrível mas precisamos saber usá-la com segurança! Neste módulo você aprende a navegar com responsabilidade.</p>
+      </div>
+    </div>
+    <div class="lessons-list">
+      <div class="lesson-item">
+        <div class="lesson-header" onclick="toggleLesson(this.closest('.lesson-item'))">
+          <div class="lesson-num">1</div>
+          <div class="lesson-info"><h4>O que é a internet?</h4><span>⏱️ 5 min • 📖 Leitura</span></div>
+          <span class="lesson-arrow">▶</span>
+        </div>
+        <div class="lesson-body">
+          <div class="content-block">
+            <h5>🌐 A internet explicada!</h5>
+            <p>A <strong>internet</strong> é como uma rede gigante que conecta computadores do mundo todo! Imagina uma teia de aranha enorme cobrindo o planeta — cada fio conecta uma casa, escola ou empresa.</p>
+            <p>Através dessa rede, podemos assistir vídeos, conversar com amigos, estudar e aprender coisas novas de qualquer lugar do mundo!</p>
+            <div class="fun-fact">
+              <span>🌍</span>
+              <p>Existem mais de <strong>5 bilhões de pessoas</strong> conectadas à internet no mundo! Isso é mais da metade da população do planeta!</p>
+            </div>
+          </div>
+          <div class="parts-grid">
+            <div class="part-card"><span class="part-icon">📺</span><h6>YouTube</h6><p>Vídeos e tutoriais</p></div>
+            <div class="part-card"><span class="part-icon">📚</span><h6>Wikipedia</h6><p>Enciclopédia online</p></div>
+            <div class="part-card"><span class="part-icon">🎮</span><h6>Jogos</h6><p>Jogar com amigos</p></div>
+            <div class="part-card"><span class="part-icon">✉️</span><h6>E-mail</h6><p>Cartas digitais</p></div>
+          </div>
+          <a href="atividades-modulo3.html" class="quiz-btn">🎯 Fazer Atividade desta Lição</a>
+        </div>
+      </div>
+      <div class="lesson-item">
+        <div class="lesson-header" onclick="toggleLesson(this.closest('.lesson-item'))">
+          <div class="lesson-num">2</div>
+          <div class="lesson-info"><h4>Navegadores — Janelas para o mundo</h4><span>⏱️ 6 min • 📖 Leitura</span></div>
+          <span class="lesson-arrow">▶</span>
+        </div>
+        <div class="lesson-body">
+          <div class="content-block">
+            <h5>🔍 O que é um navegador?</h5>
+            <p>Um <strong>navegador</strong> (ou <span class="en-term">browser</span>) é o programa que você usa para acessar a internet. É como uma janela mágica que te deixa ver qualquer site do mundo!</p>
+            <div class="parts-grid">
+              <div class="part-card"><span class="part-icon">🌍</span><h6>Chrome</h6><p>Do Google, muito usado</p></div>
+              <div class="part-card"><span class="part-icon">🦊</span><h6>Firefox</h6><p>Rápido e seguro</p></div>
+              <div class="part-card"><span class="part-icon">🔵</span><h6>Edge</h6><p>Do Windows, vem no PC</p></div>
+              <div class="part-card"><span class="part-icon">🧭</span><h6>Safari</h6><p>Para Mac e iPhone</p></div>
+            </div>
+            <p>Na barra de endereços do navegador, você digita o <strong>endereço do site</strong> (<span class="en-term">URL</span>), como <code>www.google.com.br</code>, e aperta Enter!</p>
+          </div>
+          <a href="atividades-modulo3.html" class="quiz-btn">🎯 Fazer Atividade desta Lição</a>
+        </div>
+      </div>
+      <div class="lesson-item">
+        <div class="lesson-header" onclick="toggleLesson(this.closest('.lesson-item'))">
+          <div class="lesson-num">3</div>
+          <div class="lesson-info"><h4>Regras de segurança online</h4><span>⏱️ 7 min • 📖 Leitura</span></div>
+          <span class="lesson-arrow">▶</span>
+        </div>
+        <div class="lesson-body">
+          <div class="content-block">
+            <h5>🔒 Como ficar seguro na internet</h5>
+            <div class="parts-grid">
+              <div class="part-card"><span class="part-icon">🤫</span><h6>Dados Pessoais</h6><p>Nunca diga seu nome, endereço ou telefone online</p></div>
+              <div class="part-card"><span class="part-icon">👥</span><h6>Desconhecidos</h6><p>Não fale com pessoas que não conhece</p></div>
+              <div class="part-card"><span class="part-icon">👨‍👩‍👧</span><h6>Peça Ajuda</h6><p>Sempre conte para um adulto se algo estranho acontecer</p></div>
+              <div class="part-card"><span class="part-icon">⚠️</span><h6>Links Suspeitos</h6><p>Não clique em links desconhecidos</p></div>
+            </div>
+          </div>
+          <div class="tip-box">
+            <span class="tip-icon">⚠️</span>
+            <p><strong>Regra de Ouro:</strong> Se algo na internet te deixar desconfortável ou assustado, SEMPRE fale para um adulto de confiança: pai, mãe, professor ou responsável!</p>
+          </div>
+          <a href="atividades-modulo3.html" class="quiz-btn">🎯 Fazer Atividade desta Lição</a>
+        </div>
+      </div>
+      <div class="lesson-item">
+        <div class="lesson-header" onclick="toggleLesson(this.closest('.lesson-item'))">
+          <div class="lesson-num">4</div>
+          <div class="lesson-info"><h4>Pesquisando na internet</h4><span>⏱️ 5 min • 📖 Leitura</span></div>
+          <span class="lesson-arrow">▶</span>
+        </div>
+        <div class="lesson-body">
+          <div class="content-block">
+            <h5>🔍 Como pesquisar bem?</h5>
+            <p>O <strong>Google</strong> é o buscador mais famoso do mundo. Para pesquisar, é só digitar o que você quer saber e apertar Enter!</p>
+            <p>Dicas para pesquisar melhor:<br>
+            ✅ Use palavras específicas: "dinossauros herbívoros" em vez de só "dinossauros"<br>
+            ✅ Se não entender um resultado, peça ajuda a um adulto<br>
+            ✅ Verifique se o site é confiável (escolas, museus, enciclopédias)</p>
+          </div>
+          <a href="atividades-modulo3.html" class="quiz-btn">🎯 Fazer Atividade desta Lição</a>
+        </div>
+      </div>
+      <div class="lesson-item">
+        <div class="lesson-header" onclick="toggleLesson(this.closest('.lesson-item'))">
+          <div class="lesson-num">5</div>
+          <div class="lesson-info"><h4>Bom uso do tempo de tela</h4><span>⏱️ 4 min • 📖 Leitura</span></div>
+          <span class="lesson-arrow">▶</span>
+        </div>
+        <div class="lesson-body">
+          <div class="content-block">
+            <h5>⏰ Equilíbrio é importante!</h5>
+            <p>Usar o computador é ótimo, mas precisamos equilibrar o tempo entre:</p>
+            <div class="parts-grid">
+              <div class="part-card"><span class="part-icon">💻</span><h6>Tela</h6><p>Aprender, criar, jogar com equilíbrio</p></div>
+              <div class="part-card"><span class="part-icon">⚽</span><h6>Brincadeiras</h6><p>Jogar ao ar livre, praticar esportes</p></div>
+              <div class="part-card"><span class="part-icon">📚</span><h6>Estudos</h6><p>Fazer lição, ler livros</p></div>
+              <div class="part-card"><span class="part-icon">👨‍👩‍👧</span><h6>Família</h6><p>Conversar, compartilhar momentos</p></div>
+            </div>
+          </div>
+          <a href="atividades-modulo3.html" class="quiz-btn">🎯 Fazer Atividade desta Lição</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin:2rem 0;"><a href="aulas-modulo2.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:white;color:var(--escuro);border:3px solid var(--escuro);border-radius:30px;padding:0.7rem 1.5rem;font-family:'Baloo 2',cursive;font-weight:800;font-size:1rem;text-decoration:none;box-shadow:0 4px 0 rgba(0,0,0,0.12);">← Módulo anterior</a><a href="aulas.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--escuro);color:var(--amarelo);border:3px solid var(--escuro);border-radius:30px;padding:0.7rem 1.5rem;font-family:'Baloo 2',cursive;font-weight:800;font-size:1rem;text-decoration:none;box-shadow:0 4px 0 rgba(0,0,0,0.2);">📚 Todas as Aulas</a><a href="aulas-modulo4.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--verde);color:white;border:3px solid var(--escuro);border-radius:30px;padding:0.7rem 1.5rem;font-family:'Baloo 2',cursive;font-weight:800;font-size:1rem;text-decoration:none;box-shadow:0 4px 0 #04a07a;">Próximo Módulo →</a></div>
+</div>
+
+<footer>
+  <p>🖥️ <strong>DigiTurma</strong> • 2026</p>
+</footer>
+
+<script src="script/global.js"></script>
+<script>
+  function showModule(id) {
+    document.querySelectorAll('.module-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    event.currentTarget.classList.add('active');
+    window.location.hash = id;
+  }
+  function toggleLesson(el) {
+    el.classList.toggle('open');
+  }
+  // Handle URL hash
+  const hash = window.location.hash.slice(1);
+  if (hash) {
+    const btns = document.querySelectorAll('.tab-btn');
+    if (hash === 'modulo1' || hash === 'm1') {
+      btns[0].click();
+    } else if (hash === 'modulo2' || hash === 'm2') {
+      btns[1].classList.add('active'); btns[0].classList.remove('active');
+      document.getElementById('m1').classList.remove('active');
+      document.getElementById('m2').classList.add('active');
+    } else if (hash === 'modulo3' || hash === 'm3') {
+      btns[2].classList.add('active'); btns[0].classList.remove('active');
+      document.getElementById('m1').classList.remove('active');
+      document.getElementById('m3').classList.add('active');
+    } else if (hash === 'modulo4' || hash === 'm4') {
+      btns[3].classList.add('active'); btns[0].classList.remove('active');
+      document.getElementById('m1').classList.remove('active');
+      document.getElementById('m4').classList.add('active');
+    }
+  }
+</script>
+</body>
+</html>

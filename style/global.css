@@ -1,0 +1,80 @@
+:root {
+  --amarelo: #FFD93D;
+  --laranja: #FF6B35;
+  --verde: #06D6A0;
+  --azul: #118AB2;
+  --roxo: #845EC2;
+  --rosa: #FF6B9D;
+  --fundo: #FFF9F0;
+  --escuro: #1A1A2E;
+  --card-shadow: 0 6px 0 rgba(0,0,0,0.12);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Nunito', sans-serif; background: var(--fundo); color: var(--escuro); }
+
+nav {
+  background: var(--escuro); padding: 0 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 70px; position: sticky; top: 0; z-index: 100;
+  box-shadow: 0 4px 0 var(--amarelo);
+}
+.logo { font-family: 'Baloo 2', cursive; font-size: 1.8rem; font-weight: 800; color: var(--amarelo); text-decoration: none; display: flex; align-items: center; gap: 0.4rem; }
+.logo span { color: var(--verde); }
+.nav-links { display: flex; gap: 0.5rem; }
+.nav-links a { color: white; text-decoration: none; font-weight: 700; padding: 0.4rem 1rem; border-radius: 20px; transition: all 0.2s; font-size: 0.95rem; }
+.nav-links a:hover { background: var(--amarelo); color: var(--escuro); }
+.nav-links a.active { background: var(--laranja); color: white; }
+
+.page-header { color: white; text-align: center; padding: 3rem 2rem; }
+.page-header h1 { font-family: 'Baloo 2', cursive; font-size: 2.8rem; font-weight: 800; margin-bottom: 0.5rem; }
+.page-header p { font-size: 1.1rem; opacity: 0.9; }
+
+footer {
+  background: var(--escuro); color: rgba(255,255,255,0.7);
+  text-align: center; padding: 2rem; font-size: 0.9rem; margin-top: 3rem;
+}
+footer strong { color: var(--amarelo); }
+
+/* HAMBURGER MENU */
+.hamburger {
+  display: none; flex-direction: column; gap: 5px; cursor: pointer;
+  background: none; border: none; padding: 0.5rem;
+}
+.hamburger span {
+  display: block; width: 26px; height: 3px;
+  background: white; border-radius: 3px; transition: all 0.3s;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+@media (max-width: 600px) {
+  .hamburger { display: flex; }
+  .nav-links {
+    display: none; position: absolute; top: 70px; left: 0; right: 0;
+    background: var(--escuro); flex-direction: column; align-items: stretch;
+    padding: 0.8rem; gap: 0.3rem;
+    border-top: 3px solid var(--amarelo); box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    z-index: 99;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { display: block; padding: 0.8rem 1rem; border-radius: 12px; font-size: 1rem; }
+}
+
+/* BOTÃO DE PRONÚNCIA EM INGLÊS (🔊) */
+.audio-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 38px; height: 38px; margin-left: 8px; padding: 0;
+  border: 3px solid var(--escuro); border-radius: 50%;
+  background: var(--laranja); font-size: 1.15rem; line-height: 1;
+  cursor: pointer; vertical-align: middle;
+  box-shadow: 0 3px 0 rgba(0,0,0,0.25); transition: all 0.15s;
+}
+.audio-btn:hover { transform: scale(1.15); background: var(--amarelo); }
+.audio-btn:active { transform: scale(0.95); }
+.audio-btn.playing { background: var(--verde); animation: audioPulse 0.7s ease infinite; }
+@keyframes audioPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+}
+.en-term { font-weight: 700; white-space: nowrap; }

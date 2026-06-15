@@ -1,0 +1,60 @@
+.page-header { background: linear-gradient(135deg, var(--verde), var(--azul)); }
+
+/* SEARCH */
+.search-bar {
+  max-width: 700px; margin: 2rem auto 0; padding: 0 1rem;
+  display: flex; gap: 0.8rem; align-items: center;
+}
+.search-input {
+  flex: 1; padding: 0.9rem 1.2rem; border-radius: 50px;
+  border: 3px solid var(--escuro); font-family: 'Nunito', sans-serif;
+  font-size: 1rem; font-weight: 600; outline: none;
+  box-shadow: var(--card-shadow); background: white;
+}
+.search-input:focus { border-color: var(--azul); }
+
+/* ALPHABET NAV */
+.alpha-nav {
+  max-width: 700px; margin: 1.5rem auto 0; padding: 0 1rem;
+  display: flex; flex-wrap: wrap; gap: 0.4rem; justify-content: center;
+}
+.alpha-btn {
+  width: 36px; height: 36px; border-radius: 8px; border: 2px solid var(--escuro);
+  background: white; font-family: 'Baloo 2', cursive; font-weight: 800; font-size: 0.9rem;
+  cursor: pointer; transition: all 0.15s; display: flex; align-items: center; justify-content: center;
+}
+.alpha-btn:hover { background: var(--amarelo); }
+.alpha-btn.has-terms { background: var(--escuro); color: var(--amarelo); }
+
+/* GLOSSARY */
+.glossary-container { max-width: 700px; margin: 2rem auto 4rem; padding: 0 1rem; }
+.letter-section { margin-bottom: 2.5rem; }
+.letter-heading {
+  font-family: 'Baloo 2', cursive; font-size: 2.5rem; font-weight: 800;
+  color: var(--amarelo); text-shadow: 2px 2px 0 var(--escuro);
+  border-bottom: 3px solid var(--escuro); padding-bottom: 0.3rem; margin-bottom: 1rem;
+}
+.term-card {
+  background: white; border-radius: 14px; padding: 1.2rem 1.5rem;
+  border: 2px solid #e8e8e8; margin-bottom: 0.8rem;
+  transition: all 0.2s; display: flex; gap: 1rem; align-items: flex-start;
+}
+.term-card:hover, .term-card:active { border-color: var(--azul); box-shadow: 0 4px 12px rgba(17,138,178,0.12); transform: translateX(4px); }
+.term-icon { font-size: 1.8rem; flex-shrink: 0; width: 44px; text-align: center; }
+.term-body { flex: 1; }
+.term-name { font-family: 'Baloo 2', cursive; font-size: 1.1rem; font-weight: 800; color: var(--escuro); margin-bottom: 0.3rem; }
+.term-def { font-size: 0.92rem; color: #444; line-height: 1.6; }
+.term-tag {
+  display: inline-block; margin-top: 0.5rem; padding: 0.1rem 0.7rem;
+  border-radius: 20px; font-size: 0.9rem; font-weight: 700; background: var(--fundo);
+  border: 1.5px solid var(--escuro);
+}
+.no-results { text-align: center; padding: 3rem; font-size: 1.1rem; color: #888; display: none; }
+.no-results.show { display: block; }
+
+footer { margin-top: 0; }
+
+@media (max-width: 600px) {
+  .alpha-nav { gap: 0.2rem; }
+  .alpha-btn { width: 30px; height: 30px; font-size: 0.8rem; }
+}
